@@ -1,0 +1,70 @@
+/* $Id: wood.css 4322 2006-09-04 08:49:33Z shacka $ */
+@import url("layout/basic.css");
+
+.zpMenuWood .zpMenuContainer {
+	background: url("wood/bg_menutitle.jpg")  100% 100%;
+	border: 1px solid rgb(142,114,92);
+}
+
+.zpMenuWood .zpMenu-vertical-mode .zpMenu-level-1 {
+	border-color: rgb(142,114,92);
+}
+
+/* All hrefs in the tree color black */
+.zpMenuWood .zpMenu-top .zpMenu-label,
+.zpMenuWood .zpMenu-top a{
+	color:rgb(102,74,52);
+}
+
+.zpMenuWood .zpMenu-item table.zpMenu-table {
+	font-family: "MS Serif", "New York", serif;
+	font-size: 1.2em;
+}
+
+.zpMenuWood .zpMenuContainer .zpMenuContainer {
+	margin-top:2px;
+	background: rgb(189,172,160);
+	border: 1px solid rgb(142,114,92);
+	min-width: 12em;
+	padding-top:0px;
+}
+
+/* General items that's not a top menu */
+.zpMenuWood .zpMenuContainer .zpMenuContainer .zpMenu-item {
+	margin-top:0px;
+	padding-top: 0px;
+	background: url("wood/bg_menutitle.jpg")  100% 100%;
+	width: 12em;
+	border-bottom: 1px solid rgb(189,172,160);
+	padding:0px;
+}
+
+/* Current selected items in top horizontal menu*/
+.zpMenuWood .zpMenuContainer .zpMenu-item-selected {
+	background: url(wood/bg_menutitle_on.jpg);
+}
+
+/* Current selected items in vertical menu*/
+.zpMenuWood .zpMenuContainer .zpMenuContainer .zpMenu-item-selected {
+	background: url("wood/bg_menutitle_on.jpg")  100% 100%;
+}
+
+/* The arrow that shows up when there's a sub-menu */
+.zpMenuWood .zpMenuContainer .zpMenuContainer .zpMenu-item-collapsed .zpMenu-label {
+	background: url("wood/arrow_right_black.gif")  no-repeat right center; 
+}
+
+/* The arrow that shows up when there's a sub-menu and the item is hovered*/
+.zpMenuWood .zpMenuContainer .zpMenuContainer .zpMenu-item-expanded .zpMenu-label {
+	background: url("wood/arrow_right_black.gif")  no-repeat right center; 
+}
+
+
+/* Override previously defined background defined in this css for HR */
+.zpMenuWood .zpMenuContainer .zpMenu-item-hr,
+.zpMenuWood .zpMenuContainer .zpMenuContainer .zpMenu-item-hr {
+	padding:0;
+	margin:0;
+	border:none;
+	background:black;
+}

@@ -1,0 +1,209 @@
+
+<html>
+<head>
+<title>EagleErp</title>
+<%= stylesheet_link_tag "depot" , :media => "all" %>
+<%= javascript_include_tag "utils/Masc.js", "src/zpmenu.js", "src/form.js","src/zpgrid.js"%>
+
+<style type="text/css">
+<!--
+.tablemain1{
+   width:100%;
+   height:100%; 
+   border-width:2px;
+   border-color:#7B89F6;
+   border-style:solid;
+}
+.tablemain2{
+   border-left:0px;
+   border-right:0px;
+   border-top:2px;
+   border-bottom:0px;
+   width:100%; 
+   height:100%;
+   border-color:#7B89F6;
+   border-style:solid;
+}
+.tablelefttd{
+  border-left:0px;
+  border-right:2px;
+  border-top:0px;
+  border-bottom:0px;
+  border-color:#7B89F6;
+  border-style:solid;
+  width:7%;
+  padding-top:0px;
+  background-color:#f0e7d7;
+}
+    #tabs10 {
+      float:right;
+      width:100%;
+      font-size:93%;
+      border-bottom:0px solid #2763A5;
+      line-height:normal;
+      }
+    #tabs10 ul {
+          margin:0;
+          padding:0px 0px 0 0px;
+          list-style:none;
+      }
+    #tabs10 li {
+      display:inline;
+      margin:0;
+      padding:0;
+      }
+    #tabs10 a {
+      float:right;
+      background:url('/images/tableft10.gif') no-repeat left top;
+      margin:0;
+      padding:0 0 0 4px;
+      text-decoration:none;
+      }
+    #tabs10 a span {
+      float:left;
+      display:block;
+      background:url('/images/tabright10.gif') no-repeat right top;
+      padding:5px 15px 7px 6px;
+      color:#FFF;
+      }
+    #tabs10 a span {float:none;}
+    #tabs9 a:hover span {
+      color:#FFF;
+      }
+    #tabs10 a:hover {
+      background-position:0% -42px;
+      }
+    #tabs10 a:hover span {
+      background-position:100% -42px;
+      }
+      #tabs10 #current a {
+              background-position:0% -42px;
+      }
+      #tabs10 #current a span {
+              background-position:100% -42px;
+      }
+-->
+</style>
+</head>
+	<body bgcolor="#FFFFFF" >
+			<table cellspacing="0" cellpadding="0" class="tablemain1">
+			  <tr width="100%" height="10%" style="background-color:#f0e7d7">
+			      <td width="8%">
+				        &nbsp;
+				  </td>
+				  <td width="92%">
+				      <table cellpadding="0" cellspacing="0" border="0" width="100%">
+					    <tr width="100%">
+						   <td width="40%">&nbsp;
+						   </td>
+						  <td width="60%" align="right">Search&nbsp;:
+						    <input type="text" name="Search" id="Search"/>
+						  </td>
+						</tr>
+						<tr width="100%">
+						 <td width="40%">&nbsp;
+						  </td>
+						  <td width="60%" align="right">
+						      <div id="tabs10">
+						      <ul>
+			                     <!-- CSS Tabs -->
+								<li id="current"><a href="Home.html"><span>Home</span></a></li>
+								<li><a href="#"><span>Products</span></a></li>
+								<li><a href="#"><span>Services</span></a></li>
+								<li><a href="#"><span>Support</span></a></li>
+								<li><a href="#"><span>Order</span></a></li>
+								<li><a href="#"><span>News</span></a></li>
+								<li><a href="#"><span>About</span></a></li>
+			                 </ul>
+			             </div>
+						  <ul id="menu" Style="display:none;">
+			                     <!-- CSS Tabs -->
+								<li><a href="/sample.do"><span>Home</span></a></li>
+								<li><a href="#"><span>Products</span></a></li>
+								<li><a href="#"><span>Services</span></a></li>
+								<li><a href="#"><span>Support</span></a></li>
+								<li><a href="#"><span>Order</span></a></li>
+								<li><a href="#"><span>News</span></a></li>
+								<li><a href="#"><span>About</span></a></li>
+			              </ul>
+						  </td>
+						</tr>
+					  </table>
+				  </td>
+			  </tr>
+			  <tr width="100%">
+			      <td colspan="2" >
+					  <table  cellspacing="0" cellpadding="0" class="tablemain2">
+						<tr>
+						   <td  class="tablelefttd">&nbsp; </td>
+						   <td width="85%>
+						      <iframe src="<%= @content_for_layout %>"></iframe>
+						   </td>
+						</tr>
+					  </table>
+				   </td>
+			  </tr>
+			</table>
+	</body>
+	<script>
+	  
+	  var objMenu = null;
+	  var menu1 = null;
+
+		var funcOnInit = function() {
+  		objMenu.setTriggerObject([
+  			{
+  				triggerObject: 'main',
+  				triggerArgs: 'Menu was invoked from the Div'
+  			}
+  		 ]);
+  	   }
+
+		objMenu = new Masc.Menu({
+		  source: 'menu',
+		  vertical: true,
+		  theme: 'wood',
+		  triggerEvent: 'mouseup',
+		  triggerObject: [],
+		  onInit: funcOnInit
+		});
+	
+	new Masc.Form({
+	form: '<%= @form%>',
+
+	showErrors: 'afterField',
+	showErrorsOnSubmit: true,
+	submitErrorFunc: testErrOutput,
+	theme: "winxp2"
+});
+	function testErrOutput(objErrors){
+	var message = objErrors.generalError + '<br />';
+	
+	if (objErrors.fieldErrors) {
+		for (var ii = 0; ii < objErrors.fieldErrors.length; ii++)
+				message += (ii + 1) + ': Field "' + objErrors.fieldErrors[ii].field.name + '" ' + objErrors.fieldErrors[ii].errorMessage + "<br />";
+	}
+	
+	var outputDiv = document.getElementById("errOutput");
+
+	if(outputDiv != null){
+		outputDiv.innerHTML = message;
+		outputDiv.style.display = "block";
+	}
+}
+
+function myOnSuccess() {
+	alert('Success!');
+};
+
+<% if @grid %>
+var objGrid = new Masc.Grid({
+  // Use "myGrid" div as source and container for the grid
+  container: 'myGrid',
+  // Use "lightblue" theme
+  theme: 'lightblue',
+  rowsPerPage: 20
+});
+<% end %>
+	</script>
+</html>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  pi_code: MyString
+  pi_date: 2008-04-03
+  po_id: 1
+
+two:
+  pi_code: MyString
+  pi_date: 2008-04-03
+  po_id: 1

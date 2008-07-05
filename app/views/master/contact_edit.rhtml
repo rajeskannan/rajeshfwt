@@ -1,0 +1,62 @@
+
+<%= error_messages_for :contact %>
+<form enctype="" name="contactForm" id="contactForm" action="/master/contact_update/<%= @contact.id%>"  method="post" style='text-align:left'>
+	<table>
+	 <tr cellpadding="0" cellspacing="0" border="0" width="100%">
+	   <td width="100%" colspan="3">
+        	<div id='errOutput' class="errOutput"></div>	     
+	   </td>
+	 </tr>
+	 <tr>
+	   <td width="5%"></td>
+	   <td width="90%">
+            	<div class="zpFormContent">
+            	  <fieldset>
+            	   <legend style="font-weight:bold">Prospect</legend>
+            		<fieldset>
+			         <legend>General</legend>
+            			<table border="0" cellpadding="o" cellspacing="0" width="100%">
+			             	<tr>
+            					<td class='zpFormLabel'>Prospect Code : </td>
+			             		<td ><input class='zpFormRequired'  size="40" value='<%= @contact.code %>' name="contact[code]"  type="text" ></td>
+            					<td class='zpFormLabel'>Prospect Name : </td>
+			             		<td ><input class='zpFormRequired' value='<%= @contact.name %>' size="40" name="contact[name]"  type="text" ></td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>Address : </td>
+                                <td ><input  value='<%= @contact.address %>' size="40" name="contact[address]"  type="text" ></td>
+                                <td class='zpFormLabel'>Country : </td>
+                                <td ><input class='zpFormRequired' value='<%= @contact.country %>' size="40" name="contact[country]"  type="text" ></td>
+            				</tr>
+            				<tr>
+                                <td class='zpFormLabel'>State : </td>
+                                <td ><input class='zpFormRequired' value='<%= @contact.state %>' size="40" name="contact[state]"  type="text" ></td>
+            					<td class='zpFormLabel'>City : </td>
+                                <td ><input class='zpFormRequired' value='<%= @contact.city %>' size="40" name="contact[city]"  type="text" ></td>
+			             	</tr>
+	          				<tr>
+                                <td class='zpFormLabel' colspan="2">Status : </td>
+                                <td colspan="2"><input class='zpFormRequired' value='<%= @contact.type %>' size="40" name="contact[type]"  type="text" ></td>
+			             	</tr>
+			             	
+			             	</table>
+			               </fieldset>
+			            
+	           </div>
+	   </td>
+	   <td width="5%">
+	   </td>
+     </tr>
+     <tr>
+     <td width="5%"></td>
+        <td width="90%"> 
+          <div class="zpFormButtons">
+          <%= button_to "Create", :controller => "master", :action => "contact_update" %>
+<% if false %>        	<input value="Submit" name="Submit" onclick="" type="submit" class="button"> <% end %>
+        	<input value="Clear" name="Clear" onclick="" type="reset" class="button">
+          </div> 
+        </td>
+      <td width="5%"></td>
+     </tr>
+   </table>	
+</form>

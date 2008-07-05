@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  po_no: MyString
+  po_date: 2008-04-07
+  contact_id: 1
+  total_qty: 1
+  net_amount: 1.5
+  prepared_by: MyString
+
+two:
+  po_no: MyString
+  po_date: 2008-04-07
+  contact_id: 1
+  total_qty: 1
+  net_amount: 1.5
+  prepared_by: MyString

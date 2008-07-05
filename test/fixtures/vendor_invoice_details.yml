@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  invoice_id: 1
+  item_code: 1
+  unit_price: 1.5
+  tax: 1.5
+  others: 1.5
+  total: 1.5
+
+two:
+  invoice_id: 1
+  item_code: 1
+  unit_price: 1.5
+  tax: 1.5
+  others: 1.5
+  total: 1.5

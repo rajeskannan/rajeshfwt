@@ -1,0 +1,195 @@
+/* $Id: winxp2.css 4354 2006-09-06 21:53:03Z smaxim $ */
+/*
+ "zpStatusImg" class images for form fields -- apply appropriate rules here.
+ The script auto-applies one of each of these CLASS attributes to a series of
+  nested <span>s with an innermost .zpStatusImg class <span> we style:
+ 1) "zpIsRequired" or "zpNotRequired".
+ 2) "zpIsEditing" or "zpNotEditing".
+ 3) "zpIsEmpty" or "zpNotEmpty".
+ 4) "zpIsValid" or "zpNotValid".
+  5) Always "zpStatusImg", this is the one styled.
+*/
+
+.zpFormWinxp2 span.zpStatusImg {
+ padding: 0px 12px;
+ height: 18px;
+ line-height: 18px;
+ background-repeat: no-repeat;
+ background-position: center;
+ opacity: 0.66;
+ filter: alpha(opacity=66);
+ margin-left:5px;
+ display: inline-block;
+ float: none;
+ padding-top: 5px;
+}
+.zpFormWinxp2 .zpIsEditing span.zpStatusImg {
+ opacity: 1.0;
+ filter: alpha(opacity=100);
+}
+
+.zpFormWinxp2 .zpIsRequired span.zpStatusImg {
+ background-image: url(icons/required.gif);
+ vertical-align: top;
+}
+
+.zpFormWinxp2 .zpIsEditing .zpNotEmpty span.zpStatusImg {
+ background-image: url(icons/editing.gif);
+}
+
+.zpFormWinxp2 .zpNotEditing .zpNotEmpty .zpNotValid span.zpStatusImg {
+ background-image: url(icons/required_invalid.gif);
+}
+
+.zpFormWinxp2 .zpIsValid span.zpStatusImg {
+ background-image: url(icons/validated.gif);
+}
+
+.zpFormWinxp2 .zpIsFetching span.zpStatusImg {
+        background-image: url(icons/fetching.gif) !important;
+}
+
+/*
+ * Controls the look and feel of the form
+ */
+
+.zpFormWinxp2 .errOutput{
+  background-color: #C70032;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: white;
+  display: none;
+}
+
+.zpFormWinxp2 .fieldError {
+  font-weight: bold;
+}
+
+.zpFormWinxp2 input {
+  background:#FFFFFF;
+  border: solid 1px #7F9DB9;
+  margin-bottom: 5px;
+  font-family: "MS Sans Serif" , Arial, Tahoma, Verdana, sans-serif;
+  font-size: 12px;
+  height: 19px;
+  line-height: 17px;
+}
+
+.zpFormWinxp2 textarea {
+  background:#FFFFFF;
+  border: solid 1px #7F9DB9;
+  margin-bottom: 5px;
+  font-family: "MS Sans Serif" , Arial, Tahoma, Verdana, sans-serif;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.zpFormWinxp2 .zpFormLabel {
+  padding-right: .2em;
+  width: 10em;
+  margin-top: 0px;
+  float: left;
+  font-family: "MS Sans Serif" , Arial, Tahoma, Verdana, sans-serif;
+  font-size: 11px;
+  line-height: 22px;
+}
+
+.zpFormWinxp2 .zpConsole {
+  background-color: #dddddd;
+  width:80%;
+  border: 1px solid black;
+  padding:.3em;
+}
+
+.zpFormWinxp2 {
+  font-family: "MS Sans Serif" , Arial, Tahoma, Verdana, sans-serif;
+  font-size: 11px;
+  padding-top:10px;
+}
+
+.zpFormWinxp2 .zpFormContent{
+  margin: 0px 10px;
+  padding: 0px 10px 10px 10px;
+}
+
+.zpFormWinxp2 .button{
+  background: url("winxp/button_xp.gif");
+  height: 21px;
+  width: 73px;
+  border: none;
+  line-height: 16px;
+  font-family: Arial, Verdana, sans-serif;
+  font-size: 11px;
+  margin-left: 10px;
+  padding-bottom:2px;
+}
+
+* html .zpFormWinxp2 .button{
+  padding-bottom:0px;
+}
+
+.zpFormWinxp2 .zpFormButtons{
+  text-align: right;
+  margin: 10px;
+}
+
+
+.zpFormWinxp2 fieldset{
+  margin: 10px 0px;
+  padding: 10px;
+  border: solid 1px #D0D0BF;
+  font-family: "MS Sans Serif" , Arial, Tahoma, Verdana, sans-serif;
+  font-size: 11px;
+}
+
+* html .zpFormWinxp2 fieldset{
+  padding-top: 10px;
+}
+
+.zpFormWinxp2 legend{
+  color: #0046DC;
+  padding: 3px 5px;
+  font-family: "MS Sans Serif" , Arial, Tahoma, Verdana, sans-serif;
+  font-size: 11px;
+}
+* html .zpFormWinxp2 legend{
+  margin-bottom: 10px;
+}
+
+.zpFormWinxp2 .zpFormError{
+  color: #F73460;
+  padding-left: 10px;
+  font-weight: normal;
+  vertical-align: top;
+  line-height: 20px; 
+  display: inline-block
+}
+
+.zpFormWinxp2 .multipleButton{
+        margin-left: 10px; 
+        width: 24px;    
+        font-size: 15px;
+        vertical-align: top;
+        margin-top: 2px;
+        text-align: center;
+        line-height: 10px;
+        padding-top: 1px;
+}
+.zpFormWinxp2 select {
+        background:#FFFFFF;
+        border: solid 1px #7F9DB9;
+        margin-top: 5px;
+        font-family: "MS Sans Serif" , Arial, Tahoma, Verdana, sans-serif;
+        height: 19px;
+        line-height: 19px;
+}
+
+ 
+.zpFormWinxp2 .zpFormCheckbox { /*checkbox style*/
+        border:none;
+}
+
+.zpFormWinxp2 .zpFormRadio {
+        border:none;
+}

@@ -1,0 +1,95 @@
+<%= error_messages_for :ven_inv %>
+<form enctype="" name="ven_invForm" id="ven_invForm" action="/faa/ven_inv_create"  method="post" style='text-align:left'>
+	<table>
+	 <tr cellpadding="0" cellspacing="0" border="0" width="100%">
+	   <td width="100%" colspan="3">
+        	<div id='errOutput' class="errOutput"></div>	     
+	   </td>
+	 </tr>
+	 <tr>
+	   <td width="5%">&nbsp;</td>
+	   <td width="90%">
+            	<div class="zpFormContent">
+            	  <fieldset>
+            	   <legend style="font-weight:bold">Vendor Invoice : </legend>
+            		<fieldset>
+			         <legend>General</legend>
+            			<table border="0" cellpadding="o" cellspacing="0" width="100%">
+			             	<tr>
+            					<td class='zpFormLabel'>Invoice No : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="ven_inv[code]"  type="text" ></td>
+            					<td class='zpFormLabel'>Invoice Date : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="ven_inv[name]"  type="text" ></td>
+            				</tr>
+            				<tr>
+                                <td class='zpFormLabel'>Purchase Order Id : </td>
+                                <td ><input class='zpFormRequired' value="" size="40" name="ven_inv[state]"  type="text" ></td>
+            					<td class='zpFormLabel'>Supplier : </td>
+                                <td ><input class='zpFormRequired' value="" size="40" name="ven_inv[city]"  type="text" ></td>
+			             	</tr>
+	          				<tr>
+                                <td class='zpFormLabel' >DC Ref : </td>
+                                <td ><input class='zpFormRequired' value="" size="40" name="ven_inv[type]"  type="text" ></td>
+                                <td class='zpFormLabel'>DC Date : </td>
+                                <td ><input class='zpFormRequired' value="" size="40" name="ven_inv[country]"  type="text" ></td>
+                                
+			             	</tr>
+			            
+			            
+			            	<tr>
+                                <td class='zpFormLabel' >Currency : </td>
+                                <td><input class='zpFormRequired' value="" size="40" name="ven_inv[con_per]"  type="text" ></td>
+			                	<td class='zpFormLabel'>CAT No : </td>
+                                <td ><input class='zpFormRequired' value="" size="40" name="ven_inv[con_no]"  type="text" ></td>
+			             	             	
+			             	</tr>
+			            
+			            	<tr>
+                                <td class='zpFormLabel'>Amount : </td>
+                                <td><input class='zpFormRequired' value="" size="40" name="ven_inv[email]"  type="text" ></td>
+			                	<td class='zpFormLabel'>Designation : </td>
+                                <td><input class='zpFormRequired' value="" size="40" name="ven_inv[designation]"  type="text" ></td>
+			             	             	
+			             	</tr>		            
+			            	<tr>
+                                <td class='zpFormLabel' >Tax : </td>
+                                <td ><input class='zpFormRequired' value="" size="40" name="ven_inv[alt_con_per]"  type="text" ></td>
+			                	<td class='zpFormLabel'>Frieght : </td>
+                                <td ><input class='zpFormRequired' value="" size="40" name="ven_inv[alt_con_no]"  type="text" ></td>
+			             	             	
+			             	</tr>
+			            
+    			            <tr>
+                                <td class='zpFormLabel'>Other Amount : </td>
+                                <td><input class='zpFormRequired' value="" size="40" name="ven_inv[alt_email]"  type="text" ></td>
+			                	<td class='zpFormLabel'>Surcharge : </td>
+                                <td><input class='zpFormRequired' value="" size="40" name="ven_inv[alt_designation]"  type="text" ></td>
+			             	             	
+			             	</tr>
+			             	
+			             	<tr>
+                                <td class='zpFormLabel'>Net Amount : </td>
+                                <td><input class='zpFormRequired' value="" size="40" name="ven_inv[alt_email]"  type="text" ></td>
+			                	<td class='zpFormLabel'>Status</td>
+                                <td><input class='zpFormRequired' value="" size="40" name="ven_inv[alt_designation]"  type="text" ></td>
+			             	             	
+			             	</tr>
+			             	</table>
+			               </fieldset>
+			            
+	           </div>
+	   </td>
+	   <td width="5%">&nbsp;</td>
+     </tr>
+     <tr>
+     <td width="5%">&nbsp;</td>
+        <td width="90%"> 
+          <div class="zpFormButtons">
+          <%= button_to "Create", :controller => "master", :action => "contact_create" %>
+          </div> 
+        </td>
+      <td width="5%">&nbsp;</td>
+     </tr>
+   </table>	
+</form>
+ 

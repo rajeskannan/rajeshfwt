@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  code: MyString
+  name: MyString
+  item_type: MyString
+  uom: MyString
+  unit_price: 1.5
+  reorder_level: 1
+  stock: 1
+  notes: MyText
+
+two:
+  code: MyString
+  name: MyString
+  item_type: MyString
+  uom: MyString
+  unit_price: 1.5
+  reorder_level: 1
+  stock: 1
+  notes: MyText

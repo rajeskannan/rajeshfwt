@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  req_id: 1
+  item_code: 1
+  qty: 1
+  issue_status: false
+  remarks: MyString
+
+two:
+  req_id: 1
+  item_code: 1
+  qty: 1
+  issue_status: false
+  remarks: MyString

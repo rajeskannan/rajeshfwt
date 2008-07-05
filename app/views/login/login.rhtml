@@ -1,0 +1,31 @@
+<form action="/login/login" method="post" name="userForm" />
+  <table celpadding="0" cellspacing="0" border="0">
+     
+     <tr height="30%"><td colspan="3"></td><tr>
+     <tr>
+        <td width="45%">&nbsp;</td>
+        <td width="30%" align="center">
+          <div class="zpFormContent" >
+             <fieldset>
+                <legend>Please Log In</legend><%= form_tag %>
+                    <table>
+                        <tr>
+                            <td><label for="name" >Name:</label></td>
+                            <td><%= text_field_tag :name, params[:name] %></td>
+                        </tr>
+                        <tr>
+                            <td><label for="password" >Password:</label></td>
+                            <td><%= password_field_tag :password, params[:password] %></td>
+                        </tr>                        
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td style="padding-left:29px"><%= submit_tag "Login" %></td>
+                        </tr>                        
+                    </table>
+            </fieldset>
+         </div>
+        </td>
+       <td width="25%">&nbsp;</td>
+     </tr>
+  </table>
+ </form>

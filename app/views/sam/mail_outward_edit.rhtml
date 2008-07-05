@@ -1,0 +1,62 @@
+<div class="mail_outward"><%= error_messages_for :mail_outward %></div>
+
+<%= "kannan" %>
+
+<form enctype="" name="mail_outward" id="mail_outward" action="/sam/mail_outward_update/<%= @mail_outward.id%>"  method="post" style='text-align:left'>
+
+	<table>
+	 <tr cellpadding="0" cellspacing="0" border="0" width="100%">
+	   <td width="100%" colspan="3">
+        	<div id='errOutput' class="errOutput"></div>	     
+	   </td>
+	 </tr>
+	 <tr>
+	   <td width="5%"></td>
+	   <td width="90%">
+            	<div class="zpFormContent">
+            	  <fieldset>
+            	   <legend style="font-weight:bold">Outward Mail</legend>
+            		<fieldset>
+			         <legend>General</legend>
+            			<table border="0" cellpadding="o" cellspacing="0" width="100%">
+			             	<tr>
+            					<td class='zpFormLabel'>Prospect Id : </td>
+			             		<td >
+			             		   <select class='zpFormRequired' name="mail_outward[prospect_id]"  >
+                                      <option value="<%= @prospect.id %>"> <%= @prospect.name %></option>
+                                   </select>
+                                </td>
+            					<td class='zpFormLabel'>Reference Number: </td>
+			             		<td ><input class='zpFormRequired' value="<%= @mail_outward.reference_no%>" size="40" name="mail_outward[reference_no]"  type="text" ></td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>Inward Reference Id : </td>
+                                <td ><input  value="<%= @mail_outward.inward_ref%>" size="40" name="mail_outward[inward_ref]"  type="text" ></td>
+                                <td class='zpFormLabel'>Document Detail : </td>
+                                <td ><input class='zpFormRequired' value="<%= @mail_outward.document_details%>" size="40" name="mail_outward[document_details]"  type="text" ></td>
+            				</tr>
+            				<tr>
+                                <td class='zpFormLabel'>Remarks : </td>
+                                <td ><textarea class='zpFormRequired'  cols="37" rows="5" size="40" name="mail_outward[remarks]"><%= @mail_outward.remarks%></textarea></td>
+            					<td class='zpFormLabel'>Description : </td>
+                                <td ><textarea class='zpFormRequired'  size="40" cols="37" rows="5" name="mail_outward[description]"><%= @mail_outward.description%></textarea></td>
+			             	</tr>
+			             	</table>
+			               </fieldset>
+			        </fieldSet>
+	           </div>
+	   </td>
+	   <td width="5%">
+	   </td>
+	 </tr>
+     <tr>
+     <td width="5%"></td>
+        <td width="90%"> 
+          <div class="zpFormButtons">
+          <%= button_to "Submit", :controller => "sam", :action => "mail_outwared_update" %>
+          </div> 
+        </td>
+      <td width="5%"></td>
+     </tr>
+   </table>	
+</form>

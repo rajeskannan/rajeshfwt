@@ -1,0 +1,35 @@
+  <form name="mailOutwardMain" id="mailOutwardMain">
+      <div><%= link_to 'Outward Mails', :controller => "sam", :action => "mail_outward_new" %></div>
+      <br/>
+      <br/>
+      <div id="myGrid">
+          <table>
+              <tr>
+                  <td >Prospect/Customer</td>
+                  <td>Date</td>
+                  <td>Description</td>
+                  <td>Edit</td>
+                  <td>Delete</td>
+              </tr>
+<% if false %>              id, prospect_id, date, description, reference, doc_detail, remarks<% end %>
+              <% for mo in @mail_outwards %>
+                  <tr>
+                      <td><%= h mo.prospect_id %></td>
+<% if false %>                      <td><%= h mo.date1 %></td><% end %>
+                      <td><%= h mo.created_at.to_date %></td>
+                      <td><%= h mo.description %></td>
+                      <td>
+                          <a href="/sam/mail_outward_edit/<%= mo.id%>">
+                              <img alt="Edit" src="/images/edit.png" />
+                          </a>
+                      </td>
+                      <td>
+                          <a href="/sam/mail_outward_delete/<%= mo.id%>" onclick="if (confirm('Are you sure?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', '044c55023d00716e7585accbe7b4312255236bf2'); f.appendChild(s);f.submit(); };return false;">
+                              <img alt="Delete" src="/images/delete.gif" />
+                          </a>
+                      </td>
+                  </tr>
+              <% end %>
+          </table>
+      </div>
+  </form>

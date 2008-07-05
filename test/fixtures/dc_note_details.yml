@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  d_c_note_id: 1
+  ac_code: MyString
+  description: MyString
+  amoumt: 1.5
+
+two:
+  d_c_note_id: 1
+  ac_code: MyString
+  description: MyString
+  amoumt: 1.5

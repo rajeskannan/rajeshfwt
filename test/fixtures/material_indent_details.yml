@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  indent_id: 1
+  item_code: 1
+  qty: 1
+  required_date: 2008-04-07
+  issue_status: false
+  remarks: MyString
+
+two:
+  indent_id: 1
+  item_code: 1
+  qty: 1
+  required_date: 2008-04-07
+  issue_status: false
+  remarks: MyString

@@ -1,0 +1,67 @@
+.ebul_cbindex, .ebul_cbindex ul {
+  background-color: #000000;
+  border: 0px solid #000000;
+  display: block;
+  font-size: 1px;
+  margin: 0px;
+  overflow: auto;
+  padding: 0px;
+  position: absolute;
+  visibility: hidden;
+}
+
+.ebul_cbindex_shadow {
+  background-color: #777777;
+  display: block;
+  margin: 0px;
+  overflow: hidden;
+  position: absolute;
+  visibility: hidden;
+}
+
+.ebul_cbindex table {
+  border-collapse: separate;
+}
+
+.ebul_cbindex tr {
+  background-color: #000000;
+  cursor: pointer;
+  font-size: 1px;
+}
+
+.ebul_cbindex td {
+  border: 0px solid #000000;
+  padding: 5px;
+  text-align: left;
+}
+
+.ebul_cbindex td a {
+  color: #FFFFFF;
+  font-family: "Verdana", serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.ebul_cbindex tr.hot, .ebul_cbindex tr.expanded {
+  background-color: #FF9900;
+}
+
+.ebul_cbindex tr.hot td, .ebul_cbindex tr.expanded td {
+  border-color: #FF9900;
+}
+.ebul_cbindex tr.hot a, .ebul_cbindex tr.expanded a {
+  color: #000000;
+  font-family: "Verdana", serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+ul.ebul_cbindex {
+  position: absolute;
+  visibility: hidden;
+}
+

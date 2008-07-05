@@ -1,0 +1,33 @@
+  <form name="DC_NoteMain" id="DC_NoteMain">
+      <div><%= link_to 'Create Note', :controller => "faa", :action => "d_c_note_new" %></div>
+      <br/>
+      <br/>
+      <div id="myGrid">
+          <table>
+              <tr>
+                  <td >Id</td>
+                  <td>Date</td>
+                  <td>Reference</td>
+                  <td>Edit</td>
+                  <td>Delete</td>
+              </tr>
+              <% for dcn in @d_c_notes %>
+                  <tr>
+                      <td><%= h dcn.id %></td>
+                      <td><%= h dcn.note_date %></td>
+                      <td><%= h dcn.ref %></td>
+                      <td>
+                          <a href="/faa/d_c_note_edit/<%= dcn.id%>">
+                              <img alt="Edit" src="/images/edit.png" />
+                          </a>
+                      </td>
+                      <td>
+                          <a href="/faa/d_c_note_delete/<%= dcn.id%>" onclick="if (confirm('Are you sure?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', '044c55023d00716e7585accbe7b4312255236bf2'); f.appendChild(s);f.submit(); };return false;">
+                              <img alt="Delete" src="/images/delete.gif" />
+                          </a>
+                      </td>
+                  </tr>
+              <% end %>
+          </table>
+      </div>
+  </form>

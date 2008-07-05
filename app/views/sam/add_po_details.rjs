@@ -1,0 +1,1 @@
+page[:cart].replace_html :partial => 'po_details'

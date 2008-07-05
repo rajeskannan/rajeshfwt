@@ -1,0 +1,24 @@
+<div id="myGrid">
+ <table border="1" cellpadding="0" cellspacing="0">
+   <tr>
+     <td>Item Code</td>
+     <td>Unit Price</td>
+     <td>Quantity</td>
+     <td>Total</td>
+     <td>Notes</td>
+
+   </tr>
+   
+   <% if @purchaseorderdetails_items != nil %>
+   <% for po in @purchaseorderdetails_items %>
+   <tr>
+     <td><%= h po.po_details.product_id %></td>
+     <td><%= h po.po_details.unit_price %></td>
+     <td><%= h po.po_details.quantity %></td>
+     <td><%= h po.po_details.total_amount %></td>
+     <td><%= h po.po_details.notes %></td>
+     </tr>
+     <% end %>
+     <% end %>
+</table>
+</div>

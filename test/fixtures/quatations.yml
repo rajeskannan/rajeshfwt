@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  q_code: MyString
+  q_date: 2008-04-03
+  enq_id: 1
+
+two:
+  q_code: MyString
+  q_date: 2008-04-03
+  enq_id: 1

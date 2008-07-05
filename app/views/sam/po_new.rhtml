@@ -1,0 +1,115 @@
+<%= error_messages_for :po %>
+  <%= javascript_include_tag :defaults %>
+
+<form enctype="" name="poForm" id="poForm" action="/sam/po_create"  method="post" style='text-align:left'>
+    <table  cellpadding="0" cellspacing="0" border="0" width="100%">
+	 <tr>
+	   <td width="100%" colspan="3">
+        	<div id='errOutput' class="errOutput"></div>	     
+	   </td>
+	 </tr>
+	 <tr>
+	   <td width="5%">&nbsp;</td>
+	   <td width="90%">
+          <div class="zpFormContent">
+            <fieldset>
+              <legend style="font-weight:bold">Purchase Order</legend>
+          		<table border="0" cellpadding="o" cellspacing="0" width="100%">
+			      <tr>
+            		<td class='zpFormLabel'>PO No: </td>
+			        <td ><input class='zpFormRequired' value="" size="40" name="po[po_no]"  type="text" ></td>
+            	  </tr>
+			      <tr>
+            		<td class='zpFormLabel'>PO Date: </td>
+			        <td ><input class='zpFormRequired' value="" size="40" name="po[po_date]"  type="text" ></td>
+            	  </tr>
+            	  <tr>
+            		<td class='zpFormLabel'>Currency: </td>
+			        <td ><input class='zpFormRequired' value="" size="40" name="po[currency]"  type="text" ></td>
+            	  </tr>
+            	  <tr>
+            		<td class='zpFormLabel'>Approved By: </td>
+			        <td ><input class='zpFormRequired' value="" size="40" name="po[approved_by]"  type="text" ></td>
+            	  </tr>
+            	  <tr>
+            		<td class='zpFormLabel'>Amount: </td>
+			        <td ><input class='zpFormRequired' value="" size="40" name="po[amount]"  type="text" ></td>
+            	  </tr>
+            	  <tr>
+            		<td class='zpFormLabel'>Tax: </td>
+			        <td ><input class='zpFormRequired' value="" size="40" name="po[tax]"  type="text" ></td>
+            	  </tr>
+            	  <tr>
+            		<td class='zpFormLabel'>Other Amount: </td>
+			        <td ><input class='zpFormRequired' value="" size="40" name="po[other_amount]"  type="text" ></td>
+            	  </tr>
+            	  <tr>
+            		<td class='zpFormLabel'>Net Amount: </td>
+			        <td ><input class='zpFormRequired' value="" size="40" name="po[net_amount]"  type="text" ></td>
+            	  </tr>
+            	  <tr>
+            		<td class='zpFormLabel'>Delivery Address: </td>
+			        <td ><input class='zpFormRequired' value="" size="40" name="po[delivery_address]"  type="text" ></td>
+            	  </tr>
+            	  <tr>
+            		<td class='zpFormLabel'>Terms & Condition: </td>
+			        <td ><input class='zpFormRequired' value="" size="40" name="po[terms_and_condition]"  type="text" ></td>
+            	  </tr>
+            	  <tr>
+            		<td colspan="2">
+            		  <table cellpadding="0" cellspacing="0" border="0">
+                         <tr>
+                            <td>Item</td>
+                            <td>Qty</td>
+                            <td>Notes</td>
+                            <td>&nbsp;</td>
+                         </tr>
+                         <tr>
+                            <td>
+                              <select class='zpFormRequired' name="pd[item_code]"  >
+                                <% for product in @product_items %>
+                                <option value="<%= product.id %>"><%= product.name %></option>
+                                                <% end %>
+                              </select>
+                            </td>
+                            <td>
+                              <input class='zpFormRequired' value="" size="20" name="pd[qty]" type="text" />
+                            </td>
+                            <td>
+                              <input class='zpFormRequired' value="" size="40" name="pd[notes]"  type="text" />
+                            </td>
+                            <td>
+                               <%= link_to_remote "Add",:url =>  {:action => 'add_po_details'},                                                     :submit => "poForm",
+                                                        :complete => "$('po_details').innerHTML=request.responseText" %>
+                            </td>
+                         </tr>                     				       
+            	     </table>
+           		  </td>
+            	</tr>
+            </table>
+		 </fieldSet>
+	   </div>
+   </td>
+   <td width="5%">&nbsp;</td>
+ </tr>
+     <tr>
+         <td width="5%">&nbsp;</td>
+            <td width="90%"> 
+              <div class="zpFormButtons">
+            	<%= button_to "Submit", :controller => "sam", :action => "po_create" %> 
+              </div> 
+            </td>
+          <td width="5%">&nbsp;</td>
+     </tr>
+     <tr>
+        <td colspan="3"><div class="po_details" id="po_details"></div></td>
+     </tr>
+   </table>	 
+</form>
+
+
+
+ 
+ 
+ 
+        

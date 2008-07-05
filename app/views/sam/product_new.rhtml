@@ -1,0 +1,51 @@
+<%= error_messages_for :product %>
+<form enctype="" name="productForm" id="productForm" action="/sam/product_create"  method="post" style='text-align:left'>
+	<table>
+	 <tr cellpadding="0" cellspacing="0" border="0" width="100%">
+	   <td width="100%" colspan="2">
+        	<div id='errOutput' class="errOutput"><%= error_messages_for :product %></div>	     
+	   </td>
+	 </tr>
+	 <tr>
+	   <td width="5%"></td>
+	   <td width="90%">
+            	<div class="zpFormContent">
+            	  <fieldset>
+            	   <legend style="font-weight:bold">Product</legend>
+            		<fieldset>
+			         <legend>General</legend>
+            			<table border="0" cellpadding="o" cellspacing="0" width="100%">
+
+			             	<tr>
+            					<td class='zpFormLabel'>Code: </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="product[code]"  type="text" ></td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>Product Name: </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="product[name]"  type="text" ></td>
+            				</tr>
+            							             	<tr>
+            					<td class='zpFormLabel'>Unit Price </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="product[unit_price]"  type="text" ></td>
+            				</tr>
+			             	</table>
+			               </fieldset>
+			        </fieldSet>
+	           </div>
+	   </td>
+	   <td width="5%">
+	   </td>
+     </tr>
+     <tr>
+     <td width="5%"></td>
+        <td width="90%"> 
+          <div class="zpFormButtons">
+        	<%= button_to "Submit", :controller => "sam", :action => "product_create" %> 
+        	<input value="Clear" name="Clear" onclick="" type="reset" class="button">
+          </div> 
+        </td>
+      <td width="5%"></td>
+     </tr>
+   </table>	
+</form>
+ 

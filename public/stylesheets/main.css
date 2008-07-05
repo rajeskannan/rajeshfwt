@@ -1,0 +1,119 @@
+#container {
+	margin:0;
+	min-width:770px;
+	padding:0;
+	text-align:left;
+	width:100%;
+	border:Solid 0px black;
+}
+#header{
+	background-color:#ff9933;
+	background-image:url('../images/header_right_bg.png');
+	height:30px;
+	width:100%;
+	overflow:hidden;
+}
+#bothead{
+    background-color:#ff9933;
+	background-image:url('../images/bg_path.jpg');
+	height:30px;
+	width:100%;
+	overflow:hidden;
+}
+#main_header{
+	color:#FFFFFF;
+	position:relative;
+	top:0px;
+	left:0px;
+	float:left;
+	z-index:1;
+}
+img#header_logo{
+	float:right;
+	position:relative;
+	top:2px;
+	overflow:hidden;
+	z-index:0;
+}
+.header_logo{
+    font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #000000;
+	float:right;
+	position:relative;
+	top:4px;
+	right:10px;
+	overflow:hidden;
+	z-index:0;
+}
+div.img_ban{
+   position:relative;
+   padding:0px;
+   top:0px;
+   left:0px;
+}
+/*============= BOXES =============*/
+div.box_upper_part{
+	background-image:url('../images/box_up-bg.png');
+	height:29px;
+	width:100%;
+}
+div.box_middle_part{
+	background-color:#f6f5f4;
+	height:460px;
+     overflow-y: scroll;  
+    overflow-x: none;
+	border-left:solid 1px #5f626a;
+	border-right:solid 1px #5f626a;
+}
+div.box_lower_part{
+	background-image:url('../images/box_low-bg.png');
+	height:22px;
+	margin-bottom:15px;
+}
+/*###########################################*/
+div.link_container{
+	position:relative;
+	top:6px;
+	left:25px;
+	width:90%;
+}
+div.footer_link_container{
+	position:relative;
+	top:2px;
+	left:25px;
+}
+div.pad_15tah{
+   	padding:15px;
+	font-family:Tahoma, Verdana;
+	font-size:0.8em;
+}
+a:link {
+	color: #040404; 
+	text-decoration: underline;
+	font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size:0.9em;
+}
+a:visited{
+	color: #797979;
+	text-decoration: underline;
+	font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size:0.9em;	
+}
+a:hover{
+	color: #f0812f;
+	text-decoration:underline;
+	font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size:0.9em;	
+}
+.underline {
+	text-decoration: underline;
+}
+.align-left{
+	float:left;
+}
+.align-middle{
+	float:middle;
+}
+.align-right{
+	float:right;
+}

@@ -1,0 +1,36 @@
+  <table  class="inserttable1" align="center" width="80%" border="3">
+    <tr ID="NewRow_item">
+      <td colspan="3">
+        <%='Item'%> 
+	      <input type="button" value=".." onClick="<%=display_select_belongs :new_row, :item %>">
+        <input type="button" value="+" onClick="add_new_item(this.form,'items')"/>
+      
+      &nbsp;&nbsp; <%='Quantity'%> &nbsp;<input name="new_row[quantity]" id="new_row[quantity]" size="5"  value="1"/>
+      &nbsp;&nbsp; <%='Discount'%> &nbsp;<input name="new_row[discount]" id="new_row[[discount]" size="5"  value="0"/>%
+      </td>
+    </tr>
+    <tr>
+     <td ID="NewRow_amount">
+        <%='Total'%>: <%=text_field "new_row", "price",{ "size" => 6, "align"=>"right"} %> &nbsp;
+     </td>
+     <td ID="NewRow_IVA">
+     
+      <td><%='Account'%>
+     <input name="new_row[quantity]" id="new_row[quantity]" size="5"  value="1"/>
+     </td>
+     <td><input type="button" value="Add" alt=_('Add new row') onclick="postAction(this.form,'add_new_row')" />
+        <%=hidden_field_tag "new_row[row_type]" %>
+     </td>  
+     </tr>
+  </table>
+  
+  
+  
+ <table  class="inserttable1" align="center" width="80%" border="3">
+    <tr ID="NewRow_item">
+      <td>
+      
+          </td>  
+     </tr>
+  </table>
+  

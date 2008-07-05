@@ -1,0 +1,15 @@
+<h1>New role</h1>
+
+<%= error_messages_for :role %>
+
+<form enctype="" name="roleForm" id="roleForm" action="role_create"  method="post" style='text-align:left'>
+
+  <p>
+    <b>Role</b><br />
+    <input class='zpFormRequired' value="" size="40" name="role[name]"  type="text" >
+  </p>
+  <p>
+  
+    <%= button_to "Submit", :controller => "master", :action => "role_create" %>
+  </p>
+</form>

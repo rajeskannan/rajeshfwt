@@ -1,0 +1,161 @@
+<%= error_messages_for :city %>
+<form enctype="" name="crForm" id="crForm" action="/sam/cr_create"  method="post" style='text-align:left'>
+	<table>
+	 <tr cellpadding="0" cellspacing="0" border="0" width="100%">
+	   <td width="100%" colspan="3">
+        	<div id='errOutput' class="errOutput"></div>	     
+	   </td>
+	 </tr>
+	 <tr>
+	   <td width="2%">&nbsp;</td>
+	   <td width="96%">
+            	<div class="zpFormContent">
+<% if false %>            	<input name="authenticity_token" type="hidden" value="9eed5b7e939fa00100f54778ba6105c238d4941c" /><% end %>
+            	  <fieldset>
+            	   <legend style="font-weight:bold">Contact Review</legend>
+            			<table border="0" cellpadding="o" cellspacing="0" width="100%">
+            			<tr>
+            					<td class='zpFormLabel'><input type="text" name="date1" id="sel1" size="30" ></td>
+			             		<td ><input type="reset" value=" ... " id='button1' title='Click to pop up calendar'></td>
+            				</tr>
+            			
+			             	<tr>
+            					<td class='zpFormLabel'>Enquiry No : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[enq_no]"  type="text" ></td>
+            					<td class='zpFormLabel'>Date : </td>
+			             		<td ><input class='zpFormRequired' value="" id="sel1" size="40" name="cr[enq_date]"  type="text" ><input type="reset" value=" ... " id='button1' title='Click to pop up calendar'></td>
+            				</tr>
+            				<tr>
+            					<td class='zpFormLabel'>Owtward Ref : </td>
+			             		<td ><select class='zpFormRequired' name="cr[out_ref_id]"  >
+        <% for mail in @mails %>
+            <option value="<%= mail.id %>"> <%= mail.reference_no %></option>
+        <% end %>
+				                    </select>
+			             		</td>
+            					<td class='zpFormLabel'>Product Type : </td>
+			             		<td ><select name="child-sex" class="zpFormRequired" style="width:210px">
+					                   <option value="">--choose--</option>
+					                   <option value="M">Male</option>
+					                   <option value="F">Female</option>
+				                    </select>
+			             		</td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>Customer Name : </td>
+			             		<td ><select name="child-sex" class="zpFormRequired" style="width:210px">
+					                   <option value="">--choose--</option>
+					                   <option value="M">Male</option>
+					                   <option value="F">Female</option>
+				                    </select>
+			             		</td>
+            					<td class='zpFormLabel'>Variable Imaging : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[variable_imaging]"  type="text" ></td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>Orientation : </td>
+			             		<td ><select name="child-sex" class="zpFormRequired" style="width:210px">
+					                   <option value="">--choose--</option>
+					                   <option value="M">Male</option>
+					                   <option value="F">Female</option>
+				                    </select>
+			             		</td>
+            					<td class='zpFormLabel'>Ticket size : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[tkt_size]"  type="text" ></td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>CIF by Sea : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[cif_by]"  type="text" ></td>
+            					<td class='zpFormLabel'>Quantity : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[quantity]"  type="text" ></td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>Ticket graphics : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[tkt_graphics]"  type="text" ></td>
+            					<td class='zpFormLabel'>Insurance : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[insurance]"  type="text" ></td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>POB Price : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[orientation]"  type="text" ></td>
+<% if false %>            					<td class='zpFormLabel'>CIF By Air : </td><% end %>
+<% if false %>			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[state]"  type="text" ></td><% end %>
+            				</tr>
+			             	<tr>
+<% if false %>            					<td class='zpFormLabel'>Preight By Air : </td><% end %>
+<% if false %>			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[product_type]"  type="text" ></td><% end %>
+            					<td class='zpFormLabel'>Freight : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[frieght]"  type="text" ></td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>Benday : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[benday]"  type="text" ></td>
+            					<td class='zpFormLabel'>Scratch Coating : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[scartch_coating]"  type="text" ></td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>Game : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[game]"  type="text" ></td>
+            					<td class='zpFormLabel'>Game Description : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[game_desc]"  type="text" ></td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>Numbering : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[numbering]"  type="text" ></td>
+            					<td class='zpFormLabel'>Validation No: </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[val_no]"  type="text" ></td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>Validation Code : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[val_code]"  type="text" ></td>
+            					<td class='zpFormLabel'>Designs : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[designs]"  type="text" ></td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>Special Coating : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[spl_coating]"  type="text" ></td>
+            					<td class='zpFormLabel'>Scratch Off: </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[scartch_off]"  type="text" ></td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>UV Varnish : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[uv_varnish]"  type="text" ></td>
+            					<td class='zpFormLabel'>Security Over Print : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[security_over_print]"  type="text" ></td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>Perforation : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[perforation]"  type="text" ></td>
+            					<td class='zpFormLabel'>Pin SL No : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="cr[pin_sl_no]"  type="text" ></td>
+            				</tr> 
+			             	<tr>
+            					<td class='zpFormLabel'>Packing : </td>
+			             		<td ><textarea rows="3" cols="37" name="cr[packing]"></textarea></td>
+            					<td class='zpFormLabel'>Despatch : </td>
+			             		<td ><textarea rows="3" cols="37" name="cr[despatch]"></textarea></td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>Payment Terms : </td>
+			             		<td ><textarea rows="3" cols="37" name="cr[payment_type]"></textarea></td>
+            					<td class='zpFormLabel'>Clarification : </td>
+			             		<td ><textarea rows="3" cols="37" name="cr[clarification]"></textarea></td>
+            				</tr>            				           				
+			            </table>
+			        </fieldSet>
+	           </div>
+	   </td>
+	   <td width="2%">&nbsp;</td>
+     </tr>
+     <tr>
+        <td width="2%">&nbsp;</td>
+        <td width="96%"> 
+          <div class="zpFormButtons">
+        	<%= button_to "Submit", :controller => "sam", :action => "cr_create" %> 
+        	<input value="Clear" name="Clear" onclick="" type="reset" class="button">
+          </div> 
+        </td>
+       <td width="2%">&nbsp;</td>
+     </tr>
+   </table>	
+</form>

@@ -1,0 +1,26 @@
+<h1>Listing uoms</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Short name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+
+<% for uom in @uoms %>
+  <tr>
+    <td><%=h uom.name %></td>
+    <td><%=h uom.short_name %></td>
+    <td><%=h uom.type %></td>
+    <td><%=h uom.description %></td>
+    <td><%= link_to 'Show', uom %></td>
+    <td><%= link_to 'Edit', edit_uom_path(uom) %></td>
+    <td><%= link_to 'Destroy', uom, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New uom', new_uom_path %>

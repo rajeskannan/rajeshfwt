@@ -1,0 +1,37 @@
+<form name="uomMain" id="uomMain">
+      <div><%= link_to 'New Uom', :controller => "master", :action => "uom_new" %></div>
+      <br/>
+      <br/>
+
+<div id="myGrid">
+          <table>
+              <tr>
+                  <td >Uom Name</td>
+                  <td>Short Name</td>
+                  <td>Type</td>
+                  <td>Descrition</td>
+                  <td></td>
+                  <td></td>
+              </tr>
+              <% for uom in @uoms %>
+                  <tr>
+                      <td><%= h uom.name %></td>
+                      <td><%= h uom.short_name %></td>
+                      <td><%= h uom.type %></td>
+                      <td><%= h uom.description %></td>
+                      <td>
+                          <a href="/master/uom_edit/<%= uom.id%>">
+                              <img alt="Edit" src="/images/edit.png" />
+                          </a>
+                      </td>
+                      <td>
+                          <a href="/master/uom_delete/<%= uom.id%>" onclick="if (confirm('Are you sure?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', '044c55023d00716e7585accbe7b4312255236bf2'); f.appendChild(s);f.submit(); };return false;">
+                              <img alt="Delete" src="/images/delete.gif" />
+                          </a>
+                      </td>
+                  </tr>
+              <% end %>
+          </table>
+      </div>
+  </form>
+

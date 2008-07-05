@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  mat_issue_id: 1
+  item_code: 1
+  req_qty: 1
+  issue_qty: 1
+  balance: 1
+  uom: MyString
+  issue_status: false
+  remarks: MyString
+
+two:
+  mat_issue_id: 1
+  item_code: 1
+  req_qty: 1
+  issue_qty: 1
+  balance: 1
+  uom: MyString
+  issue_status: false
+  remarks: MyString

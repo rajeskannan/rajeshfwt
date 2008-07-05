@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  receipt_date: 2008-04-07
+  invoice_id: 1
+  contact_id: 1
+  received_amount: 1.5
+  amount_words: MyString
+  received_by: MyString
+  towards: MyString
+  check_number: MyString
+  bank_name: MyString
+
+two:
+  receipt_date: 2008-04-07
+  invoice_id: 1
+  contact_id: 1
+  received_amount: 1.5
+  amount_words: MyString
+  received_by: MyString
+  towards: MyString
+  check_number: MyString
+  bank_name: MyString

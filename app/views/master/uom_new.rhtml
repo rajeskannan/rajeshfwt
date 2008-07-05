@@ -1,0 +1,29 @@
+<h1>New Uom</h1>
+
+<%= error_messages_for :uom %>
+
+<form enctype="" name="uomForm" id="uomForm" action="uom_create"  method="post" style='text-align:left'>
+
+  <p>
+    <b>Uom Name</b><br />
+    <input class='zpFormRequired' value="" size="40" name="uom[name]"  type="text" >
+  </p>
+  <p>
+    <b>Short Name</b><br />
+    <input class='zpFormRequired' value="" size="40" name="uom[short_name]"  type="text" >
+  </p>
+  <p>
+    <b>Type</b><br />
+    <input class='zpFormRequired' value="" size="40" name="uom[type]"  type="text" >
+  </p>
+  <p>
+    <b>Description</b><br />
+    <input class='zpFormRequired' value="" size="40" name="uom[description]"  type="text" >
+  </p>
+  
+  
+  <p>
+  
+    <%= button_to "Submit", :controller => "master", :action => "uom_create" %>
+  </p>
+</form>

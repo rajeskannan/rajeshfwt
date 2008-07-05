@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  pur_ret_id: 1
+  item_code: 1
+  qty: 1
+  value: 1.5
+  p: 1.5
+  reason: MyString
+
+two:
+  pur_ret_id: 1
+  item_code: 1
+  qty: 1
+  value: 1.5
+  p: 1.5
+  reason: MyString

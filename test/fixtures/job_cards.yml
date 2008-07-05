@@ -1,0 +1,43 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  job_card_no: MyString
+  card_date: 2008-04-07
+  contact_id: 1
+  deliver_address: MyText
+  lottery_name: MyString
+  draw_no_date: MyString
+  series: MyString
+  total_no_of_tickets: MyString
+  size_of_ticket: MyString
+  paper: MyString
+  est_no: 1
+  tickets: MyText
+  coupons_or_supertickets: MyText
+  bulk_or_blocktickets: MyText
+  estimate: MyString
+  packing_all_orders: MyString
+  release_order: MyString
+  remarks: MyString
+  manager: MyString
+
+two:
+  job_card_no: MyString
+  card_date: 2008-04-07
+  contact_id: 1
+  deliver_address: MyText
+  lottery_name: MyString
+  draw_no_date: MyString
+  series: MyString
+  total_no_of_tickets: MyString
+  size_of_ticket: MyString
+  paper: MyString
+  est_no: 1
+  tickets: MyText
+  coupons_or_supertickets: MyText
+  bulk_or_blocktickets: MyText
+  estimate: MyString
+  packing_all_orders: MyString
+  release_order: MyString
+  remarks: MyString
+  manager: MyString

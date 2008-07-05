@@ -1,0 +1,61 @@
+<%= error_messages_for :item %>
+<form enctype="" name="itemForm" id="itemForm" action="item_create"  method="post" style='text-align:left'>
+	<table>
+	 <tr cellpadding="0" cellspacing="0" border="0" width="100%">
+	   <td width="100%" colspan="3">
+        	<div id='errOutput' class="errOutput"></div>	     
+	   </td>
+	 </tr>
+	 <tr>
+	   <td width="5%"></td>
+	   <td width="90%">
+            	<div class="zpFormContent">
+            	  <fieldset>
+            	   <legend style="font-weight:bold">Item</legend>
+            		<fieldset>
+			         <legend>General</legend>
+            			<table border="0" cellpadding="o" cellspacing="0" width="100%">
+			             	<tr>
+            					<td class='zpFormLabel'>Item Code : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="item[code]"  type="text" ></td>
+            					<td class='zpFormLabel'>Item Name : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="item[name]"  type="text" ></td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>Item Type : </td>
+                                <td ><input class='zpFormRequired' value="" size="40" name="item[item_type]"  type="text" ></td>
+                            </tr>
+            				<tr>
+               					<td class='zpFormLabel'>ReOrder Level : </td>
+                                <td ><input class='zpFormRequired' value="" size="40" name="item[reorder_level]"  type="text" ></td>
+			             	</tr>
+	          				<tr>
+                                <td class='zpFormLabel' colspan="2">Uom Id : </td>
+                                <td><input class='zpFormRequired' value="" size="40" name="item[uom]"  type="text" ></td>
+                                <td class='zpFormLabel' colspan="2">Unit Price : </td>
+                                <td><input class='zpFormRequired' value="" size="40" name="item[unit_price]"  type="text" ></td>                                
+			             	</tr>
+			               <tr>
+                               
+            					<td class='zpFormLabel'>Description : </td>
+                                <td ><input class='zpFormRequired' value="" size="40" name="item[notes]"  type="text" ></td>
+			             	</tr>
+			             	</table>
+			          </fieldset>
+	           </div>
+	   </td>
+	   <td width="5%">
+	   </td>
+     </tr>
+     <tr>
+     <td width="5%"></td>
+        <td width="90%"> 
+          <div class="zpFormButtons">
+        	<%= button_to "Submit", :controller => "store", :action => "item_create" %>
+          </div> 
+        </td>
+      <td width="5%"></td>
+     </tr>
+   </table>	
+</form>
+ 

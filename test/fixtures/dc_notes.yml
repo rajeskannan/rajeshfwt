@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  note_date: 2008-04-07
+  contact_id: 1
+  ref: MyString
+  note_type: MyString
+  total_amount: 1.5
+  naration: MyString
+
+two:
+  note_date: 2008-04-07
+  contact_id: 1
+  ref: MyString
+  note_type: MyString
+  total_amount: 1.5
+  naration: MyString

@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  prospect_id: 1
+  date1: 2008-03-21
+  description: MyText
+  reference_no: MyString
+  inward_ref: MyString
+  document_details: MyString
+  remarks: MyText
+
+two:
+  prospect_id: 1
+  date1: 2008-03-21
+  description: MyText
+  reference_no: MyString
+  inward_ref: MyString
+  document_details: MyString
+  remarks: MyText

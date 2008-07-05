@@ -1,0 +1,69 @@
+<%= error_messages_for :city %>
+<form enctype="" name="cityForm" id="cityForm" action="city_create"  method="post" style='text-align:left'>
+	<table>
+	 <tr cellpadding="0" cellspacing="0" border="0" width="100%">
+	   <td width="100%" colspan="2">
+        	<div id='errOutput' class="errOutput"></div>	     
+	   </td>
+	 </tr>
+	 <tr>
+	   <td width="5%"></td>
+	   <td width="90%">
+            	<div class="zpFormContent">
+            	  <fieldset>
+            	   <legend style="font-weight:bold">City</legend>
+            		<fieldset>
+			         <legend>General</legend>
+            			<table border="0" cellpadding="o" cellspacing="0" width="100%">
+
+			             	<tr>
+            					<td class='zpFormLabel'>Country Name: </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="city[country]"  type="text" ></td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>State Name: </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="city[state]"  type="text" ></td>
+            				</tr>
+            				<tr>
+            					<td class='zpFormLabel'>City Name: </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="city[city]"  type="text" ></td>
+            				</tr>
+            				<tr>
+            					<td class='zpFormLabel'><input type="text" name="date1" id="sel1" size="30" ></td>
+			             		<td ><input type="reset" value=" ... " id='button1' title='Click to pop up calendar'></td>
+            				</tr>
+			             	</table>
+			               </fieldset>
+			        </fieldSet>
+	           </div>
+	   </td>
+	   <td width="5%">
+	   </td>
+     </tr>
+     <tr>
+     <td width="5%"></td>
+        <td width="90%"> 
+          <div class="zpFormButtons">
+        	<%= button_to "Submit", :controller => "master", :action => "city_create" %> 
+        	<input value="Clear" name="Clear" onclick="" type="reset" class="button">
+          </div> 
+        </td>
+      <td width="5%"></td>
+     </tr>
+   </table>	
+</form>
+ <script>
+ 
+ alert('Success!');
+		var cal = new Masc.Calendar.setup({
+		
+		inputField     :    "sel1",     // id of the input field
+		ifFormat       :    "%Y/%m/%d",     // format of the input field
+		button         :    "button1",  // What will trigger the popup of the calendar
+		timeInterval   :     15,
+		showsTime      :     true
+
+		});
+
+ 
+ </script>

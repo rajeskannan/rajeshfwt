@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  po_no: MyString
+  po_date: 2008-04-03
+  currency: MyString
+  approved_by: MyString
+  amount: 1.5
+  tax: 1.5
+  other_amount: 1.5
+  net_amount: 1.5
+  delivery_address: MyText
+  terms_and_condition: MyText
+  product_item_id: 1
+
+two:
+  po_no: MyString
+  po_date: 2008-04-03
+  currency: MyString
+  approved_by: MyString
+  amount: 1.5
+  tax: 1.5
+  other_amount: 1.5
+  net_amount: 1.5
+  delivery_address: MyText
+  terms_and_condition: MyText
+  product_item_id: 1

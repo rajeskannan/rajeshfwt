@@ -1,0 +1,35 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  invoice_no: MyString
+  invoice_date: 2008-04-07
+  our_po_id: 1
+  supplier: MyString
+  dc_ref: MyString
+  dc_date: 2008-04-07
+  currency: MyString
+  CAT_no: MyString
+  amount: 1.5
+  tax: 1.5
+  frieght: 1.5
+  other_amount: 1.5
+  surcharge: 1.5
+  net_amount: 1.5
+  status: MyString
+
+two:
+  invoice_no: MyString
+  invoice_date: 2008-04-07
+  our_po_id: 1
+  supplier: MyString
+  dc_ref: MyString
+  dc_date: 2008-04-07
+  currency: MyString
+  CAT_no: MyString
+  amount: 1.5
+  tax: 1.5
+  frieght: 1.5
+  other_amount: 1.5
+  surcharge: 1.5
+  net_amount: 1.5
+  status: MyString

@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  our_p_o_id: 1
+  ret_date: 2008-04-07
+  contact_id: 1
+  supplier_invoice_id: 1
+  material_inward_id: 1
+  prepared_by: MyString
+
+two:
+  our_p_o_id: 1
+  ret_date: 2008-04-07
+  contact_id: 1
+  supplier_invoice_id: 1
+  material_inward_id: 1
+  prepared_by: MyString

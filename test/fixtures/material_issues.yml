@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  issue_no: MyString
+  issue_date: 2008-04-07
+  mat_req_id: 1
+  approverd_by: MyString
+  status: MyString
+  remarks: MyString
+
+two:
+  issue_no: MyString
+  issue_date: 2008-04-07
+  mat_req_id: 1
+  approverd_by: MyString
+  status: MyString
+  remarks: MyString

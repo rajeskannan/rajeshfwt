@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Eagle Press Private Limited</title>
+<%= stylesheet_link_tag "main" , :media => "all" %>
+<%= stylesheet_link_tag "menu" , :media => "all" %>
+<%= stylesheet_link_tag "themes/fancyblue" , :media => "all" %>
+<%= javascript_include_tag "utils/Masc.js", "src/zpmenu.js", "src/form.js","src/zpgrid.js","src/calendar.js","lang/calendar-en.js","mnu.js"%>
+
+<script>
+  function init(){
+	new Masc.Form({
+	form: '<%= @form%>',
+	showErrors: null,
+	showErrorsOnSubmit: true,
+	submitErrorFunc: testErrOutput,
+	theme: "winxp2"
+});
+	function testErrOutput(objErrors){
+	var message = objErrors.generalError + '<br />';
+	
+	if (objErrors.fieldErrors) {
+		for (var ii = 0; ii < objErrors.fieldErrors.length; ii++)
+				message += (ii + 1) + ': Field "' + objErrors.fieldErrors[ii].field.name + '" ' + objErrors.fieldErrors[ii].errorMessage + "<br />";
+	}
+	
+	var outputDiv = document.getElementById("errOutput");
+
+	if(outputDiv != null){
+		outputDiv.innerHTML = message;
+		outputDiv.style.display = "block";
+	}
+}
+
+function myOnSuccess() {
+	alert('Success!');
+};
+
+alert('Success!');
+		var cal = new Masc.Calendar.setup({
+		
+		inputField     :    "sel1",     // id of the input field
+		ifFormat       :    "%Y/%m/%d",     // format of the input field
+		button         :    "button1",  // What will trigger the popup of the calendar
+		timeInterval   :     15,
+		showsTime      :     true
+
+		});
+
+
+<% if @grid %>
+var objGrid = new Masc.Grid({
+  // Use "myGrid" div as source and container for the grid
+  container: 'myGrid',
+  // Use "lightblue" theme
+  theme: 'lightblue',
+  rowsPerPage: 10
+});
+<% end %>
+  } 
+</script>
+</head>
+<body onload="init()" style="border:solid 0px #5f626a;margin-left:1px;margin-right:1px;margin-bottom:0px;margin-top:0px;background-color:#e7e6e4;width:100%;overflow:none;">
+<div id="container">
+	<div id="header">
+	 <span id="main_header">
+		<ul id="ebul_cbindex_1" class="ebul_cbindex" style="display: none;">
+			<li><a href="/master/contact_list" title="">About This Company</a></li>
+			<li><a href="/master/department_list">Departments</a></li>
+			<li><a href="/master/role_list">Role</a></li>
+			<li><a href="#">Change Password</a></li>
+			</ul>
+			<ul id="ebul_cbindex_2" class="ebul_cbindex" style="display: none;">
+			<li><a title="">CommonInfo</a>
+			  <ul id="ebul_cbindex_2_3">
+			  <li><a href="/master/country_list">Country</a></li>
+			  <li><a href="/master/state_list">State</a></li>
+			  <li><a href="/master/city_list" title="">City</a></li>
+			  </ul></li>
+			<li><a href="/store/item_list">Item</a></li>
+			<li><a href="/master/uom_list">UOM</a></li>
+			<li><a href="/master/contact_list">Contact</a></li>
+			<li><a href="/sam/product_list">Product</a></li>
+			<li><a href="#">Report</a></li>
+			</ul>
+			<ul id="ebul_cbindex_3" class="ebul_cbindex" style="display: none;">
+   			<li><a title="">Accounts</a>
+			  <ul id="ebul_cbindex_3_11">
+    			  <li><a href="/faa/d_c_note_list" title="">Debit/Credit Note</a></li>
+    			  <li><a href="/faa/ven_inv_list">Vendor Invoice</a></li>
+    			  <li><a href="/master/recp_list">Receipt</a></li>
+			  </ul>
+			</li>	
+			<li><a title="">Production</a>
+			  <ul id="ebul_cbindex_3_12">
+    			  <li><a href="/master/job_card_list" title="">Job Card</a></li>
+    			  <li><a href="/master/mat_req__list">Material Request</a></li>
+			  </ul>
+			</li>
+			<li><a title="">Purchase</a>
+			  <ul id="ebul_cbindex_3_13">
+    			  <li><a href="/master/our_purc_list.rhtml" title="">Purchase Order</a></li>
+    			  <li><a href="/master/pur_ret_list">Purchase Return</a></li>
+			  </ul>
+			</li>	
+			<li><a title="">Sales And Marketing</a>
+			  <ul id="ebul_cbindex_3_14">
+    			  <li><a href="/master/inw_mail_list">Mail Inward</a></li>
+    			  <li><a href="/master/mail_outward_list">Mail Outward</a></li>
+    			  <li><a href="/master/perf_Inv_list" title="">Proforma Invoice</a></li>
+    			  <li><a href="/master/cr_list" title="">Contract Review</a></li>
+    			  <li><a href="/master/quatation_list" title="">Quatation</a></li>
+    			  <li><a href="/master/po_list" title="">Purchase Order</a></li>
+    			  <li><a href="/master/wrk_pap_list" title="">Working Paper</a></li>
+    			  
+			  </ul>
+			</li>
+			<li><a title="">Store</a>
+			  <ul id="ebul_cbindex_3_15">
+    			  <li><a href="/master/mat_int__list">Material Indent</a></li>
+    			  <li><a href="/master/mat_iss_list">Material Issue</a></li>
+			  </ul>
+			</li>																																												
+			<li><a title="">Report</a></li>
+			</ul>
+			<table id="cbindexebul_table" width="0" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+			  <td style="padding-right:1px" title=""><a><img id="cbi_cbindex_1" src="/images/menu/ebbtcbindex1_0.gif" name="ebbcbindex_1" width="95" height="30" border="0" alt="Home" title="" /></a></td>
+			  <td style="padding-right:1px" title=""><a><img id="cbi_cbindex_2" src="/images/menu/ebbtcbindex2_0.gif" name="ebbcbindex_2" width="95" height="30" border="0" alt="Contacts" title="" /></a></td>
+			  <td style="padding-right:1px" title=""><a><img id="cbi_cbindex_3" src="/images/menu/ebbtcbindex3_0.gif" name="ebbcbindex_3" width="95" height="30" border="0" alt="Inventory" title="" /></a></td>
+			  <td style="padding-right:1px" title=""><a><img id="cbi_cbindex_4" src="/images/menu/ebbtcbindex4_0.gif" name="ebbcbindex_4" width="95" height="30" border="0" alt="Reports" title="" /></a></td>
+			  <td style="padding-right:1px" title=""><a><img id="cbi_cbindex_5" src="/images/menu/ebbtcbindex5_0.gif" name="ebbcbindex_5" width="95" height="30" border="0" alt="AboutUs" title="" /></a></td>
+			</tr>
+		</table>	 
+	 </span>
+<% if false %>	 <span class="header_logo">Hai</span><% end %>
+    <img src="/images/ban.gif" alt="" id="header_logo"/>
+	</div>
+	<div id="bothead" style="height:10px">
+	</div>
+	<div width="100%">
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	 <tr>
+       <td>
+		   	<div id="body-left-panel">
+				<div style="padding:10px;">
+				    
+					<div class="box_upper_part">
+						<img src="/images/box_up-left_edge.png" alt="" class="align-left"/>
+						<img src="/images/box_up-right_edge.png" alt="" class="align-right"/>
+					</div>
+					<div class="box_middle_part">
+						<div class="pad_15tah"><%= @content_for_layout %>
+						</div>
+					</div>
+					<div class="box_lower_part">
+						<img src="/images/box_low-left_edge.png" alt="" class="align-left"/>
+						<img src="/images/box_low-right_edge.png" alt="" class="align-right"/>
+					</div>
+    			</div>
+	    	</div>
+		</td>
+	 </tr>
+	</table>
+  </div>
+</div>	
+</body>
+<script type="text/javascript" src="/javascripts/mnu.js"></script>
+</html>

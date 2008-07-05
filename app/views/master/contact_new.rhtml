@@ -1,0 +1,93 @@
+<%= error_messages_for :contact %>
+<form enctype="" name="contactForm" id="contactForm" action="contact_create"  method="post" style='text-align:left'>
+	<table>
+	 <tr cellpadding="0" cellspacing="0" border="0" width="100%">
+	   <td width="100%" colspan="3">
+        	<div id='errOutput' class="errOutput"></div>	     
+	   </td>
+	 </tr>
+	 <tr>
+	   <td width="5%">&nbsp;</td>
+	   <td width="90%">
+            	<div class="zpFormContent">
+            	  <fieldset>
+            	   <legend style="font-weight:bold">Prospect</legend>
+            		<fieldset>
+			         <legend>General</legend>
+            			<table border="0" cellpadding="o" cellspacing="0" width="100%">
+			             	<tr>
+            					<td class='zpFormLabel'>Prospect Code : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="contact[code]"  type="text" ></td>
+            					<td class='zpFormLabel'>Prospect Name : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="contact[name]"  type="text" ></td>
+            				</tr>
+            				<tr>
+                                <td class='zpFormLabel'>State : </td>
+                                <td ><input class='zpFormRequired' value="" size="40" name="contact[state]"  type="text" ></td>
+            					<td class='zpFormLabel'>City : </td>
+                                <td ><input class='zpFormRequired' value="" size="40" name="contact[city]"  type="text" ></td>
+			             	</tr>
+	          				<tr>
+                                <td class='zpFormLabel' >Status : </td>
+                                <td ><input class='zpFormRequired' value="" size="40" name="contact[type]"  type="text" ></td>
+                                <td class='zpFormLabel'>Country : </td>
+                                <td ><input class='zpFormRequired' value="" size="40" name="contact[country]"  type="text" ></td>
+                                
+			             	</tr>
+			            
+			            
+			            	<tr>
+                                <td class='zpFormLabel' >Contact Person : </td>
+                                <td><input class='zpFormRequired' value="" size="40" name="contact[con_per]"  type="text" ></td>
+			                	<td class='zpFormLabel'>Contact Number : </td>
+                                <td ><input class='zpFormRequired' value="" size="40" name="contact[con_no]"  type="text" ></td>
+			             	             	
+			             	</tr>
+			            
+			            	<tr>
+                                <td class='zpFormLabel'>Email : </td>
+                                <td><input class='zpFormRequired' value="" size="40" name="contact[email]"  type="text" ></td>
+			                	<td class='zpFormLabel'>Designation : </td>
+                                <td><input class='zpFormRequired' value="" size="40" name="contact[designation]"  type="text" ></td>
+			             	             	
+			             	</tr>		            
+			            	<tr>
+                                <td class='zpFormLabel' >Alternate contact Person : </td>
+                                <td ><input class='zpFormRequired' value="" size="40" name="contact[alt_con_per]"  type="text" ></td>
+			                	<td class='zpFormLabel'>Alternate Contact Number : </td>
+                                <td ><input class='zpFormRequired' value="" size="40" name="contact[alt_con_no]"  type="text" ></td>
+			             	             	
+			             	</tr>
+			            
+    			            <tr>
+                                <td class='zpFormLabel'>Alternate Email : </td>
+                                <td><input class='zpFormRequired' value="" size="40" name="contact[alt_email]"  type="text" ></td>
+			                	<td class='zpFormLabel'>Alternate Designation : </td>
+                                <td><input class='zpFormRequired' value="" size="40" name="contact[alt_designation]"  type="text" ></td>
+			             	             	
+			             	</tr>
+			             	<tr>
+            					<td class='zpFormLabel' colspan="2">Address : </td>
+                                <td colspan="2"><textarea class='zpFormRequired' value="" cols="37" rows="5" size="40" name="contact[address]"></textarea></td>
+                            </tr>			             	
+			             	</table>
+			               </fieldset>
+			            
+	           </div>
+	   </td>
+	   <td width="5%">&nbsp;</td>
+     </tr>
+     <tr>
+     <td width="5%">&nbsp;</td>
+        <td width="90%"> 
+          <div class="zpFormButtons">
+          <%= button_to "Create", :controller => "master", :action => "contact_create" %>
+<% if false %>        	<input value="Submit" name="Submit" onclick="" type="submit" class="button"> <% end %>
+        	<input value="Clear" name="Clear" onclick="" type="reset" class="button">
+          </div> 
+        </td>
+      <td width="5%">&nbsp;</td>
+     </tr>
+   </table>	
+</form>
+ 

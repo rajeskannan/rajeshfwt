@@ -1,0 +1,50 @@
+<%= error_messages_for :city %>
+<form enctype="" name="cityForm" id="cityForm" action="city_create"  method="post" style='text-align:left'>
+	<table>
+	 <tr cellpadding="0" cellspacing="0" border="0" width="100%">
+	   <td width="100%" colspan="2">
+        	<div id='errOutput' class="errOutput"></div>	     
+	   </td>
+	 </tr>
+	 <tr>
+	   <td width="5%"></td>
+	   <td width="90%">
+            	<div class="zpFormContent">
+            	  <fieldset>
+            	   <legend style="font-weight:bold">State</legend>
+            		<fieldset>
+			         <legend>General</legend>
+            			<table border="0" cellpadding="o" cellspacing="0" width="100%">
+			             	<tr>
+            					<td class='zpFormLabel'>State Code : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="prospect[prospectCode]"  type="text" ></td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>Country Name: </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="prospect[prospectName]"  type="text" ></td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>State Name: </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="prospect[prospectName]"  type="text" ></td>
+            				</tr>
+			             	</table>
+			               </fieldset>
+			        </fieldSet>
+	           </div>
+	   </td>
+	   <td width="5%">
+	   </td>
+     </tr>
+     <tr>
+     <td width="5%"></td>
+        <td width="90%"> 
+          <div class="zpFormButtons">
+        	<input value="Submit" name="Submit" onclick="" type="submit" class="button"> 
+        	<input value="Clear" name="Clear" onclick="" type="reset" class="button">
+          </div> 
+        </td>
+      <td width="5%"></td>
+     </tr>
+   </table>	
+</form>
+ <%= link_to "Back", :action => "city_new" %>

@@ -1,0 +1,8 @@
+<p>
+  <b>Name:</b>
+  <%=h @role.name %>
+</p>
+
+
+<%= link_to 'Edit',  "/master/role_edit/#{@role.id}" %> |
+<%= link_to 'Back', roles_path %>

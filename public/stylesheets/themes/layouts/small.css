@@ -1,0 +1,9 @@
+/* $Id: small.css 4322 2006-09-04 08:49:33Z shacka $ */
+.calendar {
+  border-width: 1px;
+  font-size: 9px;
+}
+
+.calendar table {
+  font-size: 9px;
+}

@@ -1,0 +1,210 @@
+/* $Id: default.css 4391 2006-09-11 21:30:22Z smaxim $ */
+/*
+ * Controls the icons that are displayed according to the specified rules, 
+ * depending on the validity of the data entered
+ */
+/*
+ "zpStatusImg" class images for form fields -- apply appropriate rules here.
+ The script auto-applies one of each of these CLASS attributes to a series of
+  nested <span>s with an innermost .zpStatusImg class <span> we style:
+ 1) "zpIsRequired" or "zpNotRequired".
+ 2) "zpIsEmpty" or "zpNotEmpty".
+ 3) "zpIsEditing" or "zpNotEditing".
+ 4) "zpIsValid" or "zpNotValid".
+  5) Always "zpStatusImg", this is the one styled.
+*/
+
+.zpFormDefault span.zpStatusImg {
+ padding: 0px 12px;
+ height: 18px;
+ line-height: 18px;
+ background-repeat: no-repeat;
+ background-position: center 3px;
+ opacity: 0.66;
+ filter: alpha(opacity=66);
+ margin-left:5px;
+ display: inline-block;
+ float: none;
+ padding-top: 1px;
+ padding-bottom: 6px;
+ vertical-align: top;
+
+}
+
+.zpFormDefault .zpIsEditing span.zpStatusImg {
+ opacity: 1.0;
+ filter: alpha(opacity=100);
+}
+
+.zpFormDefault .zpIsRequired span.zpStatusImg {
+ background-image: url(icons/required.gif);
+}
+
+.zpFormDefault .zpIsRequired .zpNotEmpty .zpNotValid span.zpStatusImg {
+ background-image: url(icons/required_invalid.gif);
+}
+
+.zpFormDefault .zpNotEmpty .zpNotValid span.zpStatusImg {
+ background-image: url(icons/invalid.gif);
+}
+
+.zpFormDefault .zpIsValid span.zpStatusImg {
+ background-image: url(icons/validated.gif);
+}
+
+.zpFormDefault .zpIsFetching span.zpStatusImg {
+        background-image: url(icons/fetching.gif) !important;
+}
+
+/*
+ * Controls the look and feel of the form
+ */
+.zpFormDefault .errOutput{
+  background-color: #C70032;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: white;
+  display: none;
+}
+
+.zpFormDefault .fieldError {
+  font-weight: bold;
+}
+
+.zpFormDefault input {
+  background:none;
+  border: solid 1px #7F9DB9;
+  margin-bottom: 5px;
+}
+
+.zpFormDefault input:focus, .zpFormDefault textarea:focus {
+  background-color: #F1F5F2;
+}
+
+.zpFormDefault textarea {
+  background:#F5F1F2;
+  border: solid 1px #8484A1;
+  margin-top: 5px;
+}
+
+.zpFormDefault .zpFormLabel {
+  padding-right: .2em;
+  width: 10em;
+  font-family: verdana, arial, sans-serif;
+  font-size: 13px;
+  margin-bottom: 8px;
+  float: left;
+}
+
+.zpFormDefault .zpConsole {
+  background-color: #dddddd;
+  width:80%;
+  border: 1px dotted black;
+  padding:.3em;
+}
+
+.zpFormDefault {
+  background: #F1F2F8;
+  padding: 20px;
+  border: dashed 1px black;
+}
+
+.zpFormDefault .button{
+  background: url("button_bg.gif");
+  margin-right: 5px;
+  height: 22px;
+  line-height: 16px;
+  font-family: Arial;
+}
+
+
+.zpFormDefault fieldset{
+  margin: 10px 0px;
+  padding: 10px;
+  border: solid 1px #D9C4C8;
+}
+
+* html .zpFormDefault fieldset{
+  padding-top: 10px;
+}
+
+.zpFormDefault legend{
+  font-family: Verdana, Alial, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: #9195D2;
+  padding: 3px 5px;
+}
+
+* html .zpFormDefault legend{
+  margin-bottom: 10px;
+}
+
+.zpFormDefault .zpFormError{
+        font-family: Verdana, arial, sans-serif;
+        font-size: 12px;        
+        color: #F73460;
+        padding-left: 10px;
+        font-weight: normal;
+        vertical-align: top;
+        line-height: 20px; 
+        display: inline-block;
+}
+
+.zpFormDefault .multipleButton{
+        margin-left: 10px; 
+        width: 24px;
+        font-size: 15px;
+        vertical-align: top;
+        margin-top: 2px;
+        text-align: center;
+        line-height: 10px;
+        padding-top: 1px;
+        font-size: 11px;
+}
+
+.zpFormDefault select { 
+        font-family: "MS Sans Serif" , Arial, Tahoma, Verdana, sans-serif;
+        height: 19px;
+        line-height: 19px;
+        background:#F5F1F2;
+        border: solid 1px #8484A1;
+        margin-bottom: 5px;
+}
+
+ .zpFormDefault .dropDownArrow {
+        background-image: url(basic/down_arrow.gif);
+        padding:10px 10px;
+        padding-top:0px;
+        background-repeat: no-repeat;
+        margin-left:-1px;
+        display: inline;
+        vertical-align:top;
+        cursor: pointer;
+} 
+
+ * html .zpFormDefault .dropDownArrow {
+        height: 20px;
+        background-image: url(basic/down_arrow_hilite.gif);
+        padding: 0px 12px;
+        background-repeat: no-repeat;
+        margin-left:-1px;
+        margin-top:1px;
+        display: inline-block;
+        cursor: pointer;
+}
+
+ .zpFormDefault .dropDownArrow:hover,
+	  .zpFormDefault .dropDownArrow:active
+		  .zpFormDefault .dropDownArrow:focus {
+        background-image: url(basic/down_arrow_hilite.gif);
+}  
+
+.zpFormDefault .zpFormCheckbox { /*checkbox style*/
+        border:none;
+}
+
+.zpFormDefault .zpFormRadio {
+        border:none;
+}

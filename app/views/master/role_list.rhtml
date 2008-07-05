@@ -1,0 +1,31 @@
+<form name="roleMain" id="roleMain">
+      <div><%= link_to 'New Role', :controller => "master", :action => "role_new" %></div>
+      <br/>
+      <br/>
+
+<div id="myGrid">
+          <table>
+              <tr>
+                  <td >Role Name</td>
+                  <td>Edit</td>
+                  <td>Delete</td>
+              </tr>
+              <% for role in @roles %>
+                  <tr>
+                      <td><%= h role.name %></td>
+                      <td>
+                          <a href="/master/role_edit/<%= role.id%>">
+                              <img alt="Edit" src="/images/edit.png" />
+                          </a>
+                      </td>
+                      <td>
+                          <a href="/master/role_delete/<%= role.id%>" onclick="if (confirm('Are you sure?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', '044c55023d00716e7585accbe7b4312255236bf2'); f.appendChild(s);f.submit(); };return false;">
+                              <img alt="Delete" src="/images/delete.gif" />
+                          </a>
+                      </td>
+                  </tr>
+              <% end %>
+          </table>
+      </div>
+  </form>
+

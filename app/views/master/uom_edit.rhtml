@@ -1,0 +1,30 @@
+<h1>New role</h1>
+
+<%= error_messages_for :uom %>
+
+<form enctype="" name="uomForm" id="uomForm" action="/master/uom_update/<%=@uom.id%>"  method="post" style='text-align:left'>
+
+  <p>
+    <b>Uom Name</b><br />
+    <input class='zpFormRequired' value="<%=@uom.name%>" size="40" name="uom[name]"  type="text" >
+  </p>
+  <p>
+    <b>Short Name</b><br />
+    <input class='zpFormRequired'  value="<%=@uom.short_name%>" size="40" name="uom[short_name]"  type="text" >
+  </p>
+  <p>
+    <b>Type</b><br />
+    <input class='zpFormRequired'  value="<%=@uom.type%>" size="40" name="uom[type]"  type="text" >
+  </p>
+  <p>
+    <b>Description</b><br />
+    <input class='zpFormRequired'  value="<%=@uom.description%>" size="40" name="uom[description]"  type="textarea" >
+  </p>
+  
+  
+  
+  <p>
+  
+    <%= button_to "Submit", :controller => "master", :action => "uom_update" %>
+  </p>
+</form>

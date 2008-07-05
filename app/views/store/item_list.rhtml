@@ -1,0 +1,40 @@
+  <form name="itemMain" id="itemMain">
+      <div><%= link_to 'New Item', :controller => "store", :action => "item_new" %></div>
+      <br/>
+      <br/>
+      <div id="myGrid">
+          <table>
+              <tr>
+                  <td >Code</td>
+                  <td>Name</td>
+                  <td>UOM</td>
+                  <td>Unit Price</td>
+                  <td>Stock</td>
+                  <td>Minimum Reorder Level</td>
+                  <td>Edit</td>
+                  <td>Delete</td>
+              </tr>
+              <% for item in @items %>
+                  <tr>
+                      <td><%= h item.code %></td>
+                      <td><%= h item.name %></td>
+                      <td><%= h item.uom %></td>
+                      <td><%= h item.unit_price %></td>
+                      <td><%= h item.stock %></td>
+                      <td><%= h item.reorder_level %></td>
+                      
+                      <td>
+                          <a href="/store/item_edit/<%= item.id%>">
+                              <img alt="Edit" src="/images/edit.png" />
+                          </a>
+                      </td>
+                      <td>
+                          <a href="/store/item_delete/<%= item.id%>" onclick="if (confirm('Are you sure?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', '044c55023d00716e7585accbe7b4312255236bf2'); f.appendChild(s);f.submit(); };return false;">
+                              <img alt="Delete" src="/images/delete.gif" />
+                          </a>
+                      </td>
+                  </tr>
+              <% end %>
+          </table>
+      </div>
+  </form>

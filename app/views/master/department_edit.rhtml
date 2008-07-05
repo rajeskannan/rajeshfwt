@@ -1,0 +1,16 @@
+<%= error_messages_for :department %>
+<form enctype="" name="departmentForm" id="departmentForm" action="/master/department_update/<%= @department.id%>"  method="post" style='text-align:left'>
+<p>
+    <b>Department Code</b><br />
+    <input class='zpFormRequired' value='<%= @department.dept_code %>' size="40" name="department[dept_code]"  type="text" >
+  </p>
+  <p>
+    <b>Department</b><br />
+    <input class='zpFormRequired' value='<%= @department.department %>' size="40" name="department[department]"  type="text" >
+  </p>
+  
+  <p>
+  
+    <%= button_to "Submit", :controller => "master", :action => "department_update" %>
+  </p>
+</form>

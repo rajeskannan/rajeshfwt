@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  po_id: 1
+  unit_price: 1.5
+  quantity: 1
+  total_amount: 1.5
+  notes: MyString
+
+two:
+  po_id: 1
+  unit_price: 1.5
+  quantity: 1
+  total_amount: 1.5
+  notes: MyString

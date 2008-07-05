@@ -1,0 +1,250 @@
+/* $Id: lightblue.css 4322 2006-09-04 08:49:33Z shacka $ */
+/*
+  Root class name is formed from zpGrid + Lightblue file name with first character
+  in upper case and following characters in lower case.
+*/
+
+.zpGridLightblue {
+  border-collapse: collapse;
+  border: 0px;
+}
+
+.zpGridLightblue .zpGridTable {
+  padding: 0px;
+}
+
+.zpGridLightblue table {
+  border-collapse: collapse;
+}
+
+.zpGridLightblue table td {
+  border: 1px solid #ccc;
+  border-top: 0px;
+  padding: 3px 5px;
+  font: 11px Tahoma, Arial, sans-serif;
+  -moz-user-select: none;
+  cursor: default;
+}
+
+.zpGridLightblue table div {
+  overflow: hidden;
+}
+
+/* Alignment depending from type */
+
+.zpGridLightblue .zpGridTypeInt,
+.zpGridLightblue .zpGridTypeFloat {
+  text-align: right;
+}
+
+.zpGridLightblue .zpGridTypeBoolean,
+.zpGridLightblue .zpGridTypeBooleanTF {
+  text-align: center;
+}
+
+/* Header */
+
+.zpGridLightblue table tr.zpGridRow0 .zpGridCell {
+  background: url(lightblue/headbg.jpg) repeat-x top #CDD8EB;
+  cursor: pointer;
+  border-right: solid 1px #ACA8A9;
+  border-top: solid 1px #ccc;
+  font: 11px Tahoma, Arial, sans-serif bold;
+  font-weight: bold;
+  padding-top: 5px;
+  color: #000;  
+}
+
+/* Active header */
+
+.zpGridLightblue table tr.zpGridRow0 .zpGridCellActive {
+  background: url(lightblue/headbgsel.jpg) repeat-x top #ACB5CD;
+}
+
+/* Sorted header */
+
+.zpGridLightblue table tr.zpGridRow0 .zpGridSortedAsc div {
+  background: url(lightblue/sortedasc.gif) no-repeat right center;
+}
+
+.zpGridLightblue table tr.zpGridRow0 .zpGridSortedAscActive div {
+  background: url(lightblue/sortedasc.gif) no-repeat right center;
+}
+
+.zpGridLightblue table tr.zpGridRow0 .zpGridSortedDesc div {
+  background: url(lightblue/sorteddesc.gif) no-repeat right center;
+}
+
+.zpGridLightblue table tr.zpGridRow0 .zpGridSortedDescActive div {
+  background: url(lightblue/sorteddesc.gif) no-repeat right center;
+}
+
+.zpGridLightblue table tr.zpGridRow0 .zpGridSortedAsc div span,
+.zpGridLightblue table tr.zpGridRow0 .zpGridSortedDesc div span
+{
+  display: block;
+  padding-right: 10px;
+}
+
+/* Data */
+
+.zpGridLightblue table .zpGridRowOdd  {
+  background: #F7F9FF;
+}
+
+.zpGridLightblue table .zpGridRowEven {
+  background: #fff;
+}
+
+.zpGridLightblue table .zpGridRowLast .zpGridCell {
+  border-bottom: solid 2px #ccc;
+}
+
+.zpGridLightblue table .zpGridCell0 {
+  background: url(lightblue/bgleft.jpg) repeat-y left #fff;
+  border-width: 0px 1px 1px 0px;
+  border-style: solid;
+  border-color: #ccc;
+  color: #000;
+}
+
+.zpGridLightblue table .zpGridCellLast {
+  border-right: 0px;
+  background: url(lightblue/bgright.jpg) repeat-y right #fff;
+}
+
+.zpGridLightblue table .zpGridRowOdd .zpGridCell0 {
+  background: url(lightblue/oddbgleft.jpg) repeat-y left #F7F9FF;
+  border-right: 0px;
+}
+
+.zpGridLightblue table .zpGridRowOdd .zpGridCellLast {
+  background: url(lightblue/oddbgright.jpg) repeat-y right #F7F9FF;
+  border-right: 0px;
+}
+
+/* Active row and cell */
+
+.zpGridLightblue table .zpGridRowActive {
+  background: #FFF0E8;
+}
+
+.zpGridLightblue table .zpGridRowActive .zpGridCell0 {
+  background: url(lightblue/selbgleft.jpg) repeat-y left #FFF0E8;
+}
+
+.zpGridLightblue table .zpGridRowActive .zpGridCellLast {
+  background: url(lightblue/selbgright.jpg) repeat-y right #FFF0E8;
+}
+
+/* Selected row and cell */
+
+.zpGridLightblue table .zpGridRowSelected .zpGridCell {
+  background: #e90;
+}
+
+.zpGridLightblue table .zpGridRow .zpGridCellSelected {
+  background: #e60;
+}
+
+/* Invalid row and cell */
+
+.zpGridLightblue table .zpGridRowInvalid .zpGridCell {
+}
+
+.zpGridLightblue table .zpGridRow .zpGridCellInvalid {
+  background: #f00;
+  color: #fff;
+}
+
+/* Editable row and cell */
+
+.zpGridLightblue table .zpGridRowEditableOdd .zpGridCell {
+  background: #F7F9FF;
+}
+
+.zpGridLightblue table .zpGridRowEditableOdd .zpGridCell0 {
+  background: url(lightblue/oddbgleft.jpg) repeat-y left #F7F9FF !important;
+}
+
+.zpGridLightblue table .zpGridRowEditableOdd .zpGridCellLast {
+  background: url(lightblue/oddbgright.jpg) repeat-y right #F7F9FF !important;
+}
+
+.zpGridLightblue table .zpGridRowEditableEven .zpGridCell {
+  background: #fff;
+}
+
+.zpGridLightblue table .zpGridRowEditableEven .zpGridCell0 {
+  background: url(lightblue/bgleft.jpg) repeat-y left #fff !important;
+}
+
+.zpGridLightblue table .zpGridRowEditableEven .zpGridCellLast {
+  background: url(lightblue/bgright.jpg) repeat-y right #fff !important;
+}
+
+.zpGridLightblue table .zpGridRow .zpGridCellEditable {
+  text-align: left !important;
+}
+
+.zpGridLightblue table .zpGridRow .zpGridCellEditable div,
+.zpGridLightblue table .zpGridRow .zpGridCellEditable textarea,
+.zpGridLightblue table .zpGridRow .zpGridCellEditable select {
+  background: #ebebeb;
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  font: 11px Tahoma, Arial, sans-serif;
+  overflow: visible;
+}
+
+/* Checkbox */
+.zpGridLightblue table .zpGridRow .zpGridCellEditable input {
+  height: 13px;
+  width: 13px;
+  margin: 0px;
+}
+
+/* Pagination */
+
+.zpGridLightblue .zpGridPagination {
+  font: 12px Arial, sans-serif;
+  color: #000;
+  text-align: center;
+  padding-top:5px;
+  color: #6D788B;
+}
+
+.zpGridLightblue .zpGridPagination .zpGridPage {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.zpGridLightblue .zpGridPagination .zpGridNextPage,
+.zpGridLightblue .zpGridPagination .zpGridPrevPage {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0px 4px 0px 4px;
+  color: #ADB8CB;
+}
+
+.zpGridLightblue .zpGridPagination .zpGridNextPage:hover, 
+.zpGridLightblue .zpGridPagination .zpGridPrevPage:hover {
+  color: #CD989B; 
+}
+
+.zpGridLightblue .zpGridPagination .zpGridFirstPage,
+.zpGridLightblue .zpGridPagination .zpGridLastPage {
+  cursor: pointer;
+  font-weight: bold;
+  color: #ADB8CB;
+}
+
+.zpGridLightblue .zpGridPagination .zpGridFirstPage:hover, 
+.zpGridLightblue .zpGridPagination .zpGridLastPage:hover {
+  color: #CD989B; 
+}
+
+.zpGridLightblue .zpGridPagination .zpGridCurrentPage {
+  font-weight: bold;
+}

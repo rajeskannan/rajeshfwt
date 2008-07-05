@@ -1,0 +1,33 @@
+ <form name="ven_invForm" id="ven_invForm">
+      <div><font size='5' ><b>Invoice List </b></font> &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to '[Add New Invoice]', :controller => "faa", :action => "ven_inv_new" %></div>
+      <br/>
+      <br/>
+      <div id="myGrid">
+      
+          <table>
+              <tr>
+                <td>Invoice No</td>
+                <td>Invoice Date</td>
+                <td>Edit</td>
+                <td>Delete</td>
+              </tr>
+             <% for ven_inv in @ven_invs%>
+                  <tr>
+                      <td><%=h ven_inv.invoice_no %></td>
+                       <td><%=h ven_inv.invoice_date %></td>
+                      <td>
+                          <a href="/master/contact_edit/<%= ven_inv.id%>">
+                              <img alt="Edit" src="/images/edit.png" />
+                          </a>
+                      </td>
+                      <td>
+                          <a href="/master/contact_delete/<%= ven_inv.id%>" onclick="if (confirm('Are you sure?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', '044c55023d00716e7585accbe7b4312255236bf2'); f.appendChild(s);f.submit(); };return false;">
+                              <img alt="Delete" src="/images/delete.gif" />
+                          </a>
+                      </td>
+                  </tr>
+              <% end %>
+          </table>
+        
+      </div>
+  </form>

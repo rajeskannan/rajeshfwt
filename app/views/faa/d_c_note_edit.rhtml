@@ -1,0 +1,53 @@
+<%= error_messages_for :d_c_note %>
+<form enctype="" name="dcnoteForm" id="dcnoteForm" action="/faa/d_c_note_create"  method="post" style='text-align:left'>
+	<table>
+	 <tr cellpadding="0" cellspacing="0" border="0" width="100%">
+	   <td width="100%" colspan="3">
+        	<div id='errOutput' class="errOutput"></div>	     
+	   </td>
+	 </tr>
+	 <tr>
+	   <td width="5%">&nbsp;</td>
+	   <td width="90%">
+            	<div class="zpFormContent">
+            	  <fieldset>
+            	   <legend style="font-weight:bold">Debit/Credit</legend>
+            		<fieldset>
+			         <legend>General</legend>
+            			<table border="0" cellpadding="o" cellspacing="0" width="100%">
+			             	<tr>
+            					<td class='zpFormLabel'>Date : </td>
+			             		<td ><input class='zpFormRequired' value="<%= @d_c_note.note_date%>" size="40" name="dcn[note_date]"  type="text" ></td>
+            					<td class='zpFormLabel'>Customer/Supplier : </td>
+			             		<td ><input class='zpFormRequired' value="<%= @d_c_note.contact_id%>" size="40" name="dcn[contact_id]"  type="text" ></td>
+            				</tr>
+            				<tr>
+                                <td class='zpFormLabel'>Reference : </td>
+                                <td ><input class='zpFormRequired' value="<%= @d_c_note.ref%>" size="40" name="dcn[ref]"  type="text" ></td>
+            					<td class='zpFormLabel'>Note Type : </td>
+                                <td ><input class='zpFormRequired' value="<%= @d_c_note.note_type%>" size="40" name="dcn[note_type]"  type="text" ></td>
+			             	</tr>
+	          				<tr>
+                                <td class='zpFormLabel' colspan="2">Total Amount : </td>
+                                <td colspan="2"><input class='zpFormRequired' value="<%= @d_c_note.total_amount%>" size="40" name="dcn[total_amount]"  type="text" ></td>
+                                <td class='zpFormLabel' colspan="2">Naration : </td>
+                                <td colspan="2"><input class='zpFormRequired' value="<%= @d_c_note.naration%>" size="40" name="dcn[naration]"  type="text" ></td>                                
+			             	</tr>
+			             	</table>
+			               </fieldset>
+	           </div>
+	   </td>
+	   <td width="5%">&nbsp;</td>
+     </tr>
+     <tr>
+     <td width="5%">&nbsp;</td>
+        <td width="90%"> 
+          <div class="zpFormButtons">
+          <%= button_to "Create", :controller => "master", :action => "contact_create" %>
+          </div> 
+        </td>
+      <td width="5%">&nbsp;</td>
+     </tr>
+   </table>	
+</form>
+ 

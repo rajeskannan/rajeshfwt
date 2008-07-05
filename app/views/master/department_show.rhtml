@@ -1,0 +1,12 @@
+<p>
+  <b>Department:</b>
+  <%=h @department.department %>
+</p>
+<p>
+  <b>Department Code:</b>
+  <%=h @department.dept_code %>
+</p>
+
+
+<%= link_to 'Edit',  "/master/department_edit/#{@department.id}"%> |
+<%= link_to 'Back', departments_path %>

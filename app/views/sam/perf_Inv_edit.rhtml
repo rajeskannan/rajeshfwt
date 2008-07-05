@@ -1,0 +1,101 @@
+<%= error_messages_for :city %>
+<form enctype="" name="cityForm" id="cityForm" action="city_create"  method="post" style='text-align:left'>
+	<table>
+	 <tr cellpadding="0" cellspacing="0" border="0" width="100%">
+	   <td width="100%" colspan="3">
+        	<div id='errOutput' class="errOutput"></div>	     
+	   </td>
+	 </tr>
+	 <tr>
+	   <td width="2%">&nbsp;</td>
+	   <td width="96%">
+            	<div class="zpFormContent">
+            	<input name="authenticity_token" type="hidden" value="9eed5b7e939fa00100f54778ba6105c238d4941c" />
+            	  <fieldset>
+            	   <legend style="font-weight:bold">Performa Invoice</legend>
+            			<table border="0" cellpadding="o" cellspacing="0" width="100%">
+			             	<tr>
+            					<td class='zpFormLabel'>Performa No : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="city[country]"  type="text" ></td>
+            					<td class='zpFormLabel'>Performa Date : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="city[state]"  type="text" ></td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>Exporter Name : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="city[country]"  type="text" ></td>
+            					<td class='zpFormLabel'>Applicant : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="city[state]"  type="text" ></td>
+            				</tr>
+            				<tr>
+            					<td class='zpFormLabel'>Export Code : </td>
+			             		<td ><select name="child-sex" class="zpFormRequired" style="width:210px">
+					                   <option value="">--choose--</option>
+					                   <option value="M">Male</option>
+					                   <option value="F">Female</option>
+				                    </select>
+			             		</td>
+            					<td class='zpFormLabel'>Other Reference : </td>
+			             		<td ><select name="child-sex" class="zpFormRequired" style="width:210px">
+					                   <option value="">--choose--</option>
+					                   <option value="M">Male</option>
+					                   <option value="F">Female</option>
+				                    </select>
+			             		</td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>Consignee Name : </td>
+			             		<td ><select name="child-sex" class="zpFormRequired" style="width:210px">
+					                   <option value="">--choose--</option>
+					                   <option value="M">Male</option>
+					                   <option value="F">Female</option>
+				                    </select>
+			             		</td>
+            					<td class='zpFormLabel'>IE code : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="city[state]"  type="text" ></td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>Origin : </td>
+			             		<td ><select name="child-sex" class="zpFormRequired" style="width:210px">
+					                   <option value="">--choose--</option>
+					                   <option value="M">Male</option>
+					                   <option value="F">Female</option>
+				                    </select>
+			             		</td>
+            					<td class='zpFormLabel'>Destination : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="city[state]"  type="text" ></td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>Port Of Loading : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="city[country]"  type="text" ></td>
+            					<td class='zpFormLabel'>Port Of Discharge : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="city[state]"  type="text" ></td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel'>Final Destination : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="city[country]"  type="text" ></td>
+            					<td class='zpFormLabel'>Terms Of Delivery : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="city[state]"  type="text" ></td>
+            				</tr>
+			             	<tr>
+            					<td class='zpFormLabel' clospan="2s">Total Amount : </td>
+			             		<td ><input class='zpFormRequired' value="" size="40" name="city[country]"  type="text" ></td>
+            				</tr>
+			            </table>
+			        </fieldSet>
+	           </div>
+	   </td>
+	   <td width="2%">&nbsp;</td>
+     </tr>
+     <tr>
+        <td width="2%">&nbsp;</td>
+        <td width="96%"> 
+          <div class="zpFormButtons">
+        	<%= button_to "Submit", :controller => "master", :action => "city_create" %> 
+        	<input value="Clear" name="Clear" onclick="" type="reset" class="button">
+          </div> 
+        </td>
+       <td width="2%">&nbsp;</td>
+     </tr>
+   </table>	
+</form>
+ <%= link_to "Back", :controller => "master", :action => "city_new" %>

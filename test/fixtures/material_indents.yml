@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  indent_date: 2008-04-07
+  job_code: 1
+  dept_code: 1
+  supervisor: MyString
+  store_incharge: MyString
+
+two:
+  indent_date: 2008-04-07
+  job_code: 1
+  dept_code: 1
+  supervisor: MyString
+  store_incharge: MyString

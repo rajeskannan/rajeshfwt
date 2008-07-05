@@ -1,0 +1,69 @@
+<% rowIndex="rows["+ (rows_counter.to_s) +"]" %>
+<% unless rows.deleted? %>
+<tr>
+  <td><%= rows.code %></td>
+
+<%     when DocRow::ITEM %>
+    <td><%= text_field_tag_if_editable(rowIndex +"[description]", rows["description"], {"size" => 30, "maxlength"=>100}) %> &nbsp;</td>
+    <td><%= text_field_tag_if_editable rowIndex +"[unit]", rows["unit"],{"size" => 3, "maxlength"=>3} %> &nbsp;</td>
+    <td align="right"><%= text_field_tag_if_editable rowIndex +"[quantity]", rows["quantity"],{"size" => 3, "maxlength"=>7,"align"=>"right","valign"=>"top"} %> &nbsp;</td>
+    <td align="right"><%= text_field_tag_if_editable rowIndex +"[price]", rows["price"],{"size" => 7, "maxlength"=>11,"align"=>"right"} %> &nbsp;</td>
+    <td align="right"><%= text_field_tag_if_editable rowIndex +"[discount]", rows["discount"],{"size" => 4, "maxlength"=>6,"align"=>"right"} %> &nbsp;</td>
+    <td align="right"><%= rows.amount  %> &nbsp;</td>
+    <td>
+<%       if @doc.editable? %>
+       <select name="<%=rowIndex%>[tax_rate_id]">
+          <%= options_from_collection_for_select(@tax_rates, "id", "description", rows.tax_rate_id.to_i) %>
+       </select>
+<%       else %>
+     <%=rows.tax_rate.description%>
+<%       end %>
+    </td>
+<%     when DocRow::DESCRIPTION %>
+    <td colspan="7">
+<%       if @doc.editable?     %>
+      <%= text_area_tag rowIndex +"[description]", rows["description"], {"cols" => "50", "rows"=>"3", "maxlength"=>60} %>
+<%       else %>
+      <pre><%=rows["description"] %></pre> 
+<%       end       %>
+    </td>
+<%     when DocRow::FORFAIT %>
+    <td colspan="5"><%= text_field_tag_if_editable  rowIndex +"[description]", rows["description"], {"size" => 50, "maxlength"=>100} %> &nbsp;</td>
+    <td align="right"><%= text_field_tag_if_editable rowIndex +"[price]", rows["price"],{"size" => 7, "maxlength"=>11,"align"=>"right"} %> &nbsp;</td>
+    <td>&nbsp;</td>
+<%     when DocRow::EXPENSE %>
+    <td colspan="5"><%= text_field_tag_if_editable  rowIndex +"[description]", rows["description"], {"size" => 50, "maxlength"=>100} %> &nbsp;</td>
+    <td align="right"><%= text_field_tag_if_editable rowIndex +"[price]", rows["price"],{"size" => 7, "maxlength"=>11,"align"=>"right"} %> &nbsp;</td>
+    <td>
+<%       if @doc.editable? %>
+     <select name="<%=rowIndex%>[tax_rate_id]">
+          <%= options_from_collection_for_select(@tax_rates, "id", "description", rows.tax_rate_id.to_i) %>
+     </select>
+<%       else %>
+     <%=rows.tax_rate.description%>
+<%       end %>
+   </td>
+<%   end %>
+ <td>
+<%   unless rows.row_type==DocRow::DESCRIPTION
+<%     if @doc.editable? and rows.account.nil? %>
+     <select name="<%=rowIndex%>[account_id]">
+         <%= options_for_accounts(@accounts,false,rows.account_id)  %>
+     </select>
+<%     else %>
+     <%=hidden_field_tag rowIndex +"[account_id]", rows["account_id"]%>
+     <font size="-2"><%=rows.account.to_s unless rows.account.nil? %></font>
+<%     end %>
+<%   end  %>
+ </td>
+ <td> 
+<%   if @doc.editable? %>
+   <a href="#" onclick="deleteRow(<%=rows_counter %>,this.parentNode.parentNode.rowIndex)"> <img src="/images/x.gif" "/> </a>
+<%   end %>
+ </td>
+ </tr>   
+<% end %>
+  <%=hidden_field_tag rowIndex +"[id]", rows["id"]%>
+  <%=hidden_field_tag rowIndex +"[row_type]", rows["row_type"]%>
+  <%=hidden_field_tag rowIndex +"[code]", rows["code"]%>
+  <%=hidden_field_tag rowIndex +"[item_id]", rows["item_id"]%>

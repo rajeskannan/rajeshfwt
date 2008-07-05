@@ -1,0 +1,67 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  enq_no: MyString
+  enq_date: 2008-04-03
+  out_ref_id: MyString
+  product_type: MyString
+  contact_id: 1
+  variable_imaging: MyString
+  orientation: MyString
+  tkt_size: MyString
+  cif_by: MyString
+  frieght: 1.5
+  quantity: 1
+  tkt_graphics: MyString
+  insurance: MyString
+  packing: MyText
+  despatch: MyText
+  payment_type: MyText
+  clarification: MyText
+  benday: MyString
+  scartch_coating: MyString
+  game: MyString
+  game_desc: MyString
+  numbering: MyString
+  val_no: MyString
+  val_code: MyString
+  designs: MyString
+  spl_coating: MyString
+  scartch_off: MyString
+  uv_varnish: MyString
+  security_over_print: MyString
+  perforation: MyString
+  pin_sl_no: MyString
+
+two:
+  enq_no: MyString
+  enq_date: 2008-04-03
+  out_ref_id: MyString
+  product_type: MyString
+  contact_id: 1
+  variable_imaging: MyString
+  orientation: MyString
+  tkt_size: MyString
+  cif_by: MyString
+  frieght: 1.5
+  quantity: 1
+  tkt_graphics: MyString
+  insurance: MyString
+  packing: MyText
+  despatch: MyText
+  payment_type: MyText
+  clarification: MyText
+  benday: MyString
+  scartch_coating: MyString
+  game: MyString
+  game_desc: MyString
+  numbering: MyString
+  val_no: MyString
+  val_code: MyString
+  designs: MyString
+  spl_coating: MyString
+  scartch_off: MyString
+  uv_varnish: MyString
+  security_over_print: MyString
+  perforation: MyString
+  pin_sl_no: MyString
